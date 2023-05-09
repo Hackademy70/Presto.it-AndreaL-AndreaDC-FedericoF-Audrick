@@ -20,10 +20,10 @@
                     </div>
                     <div class="mb-3 form-check">
                         <input name="rember" type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label for="exampleCheck1" class="form-check-input">ricordati di me</label>
+                        <label for="exampleCheck1" class="form-check-label">ricordati di me</label>
                         
                     </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <button type="submit" class="btn btn-primary my-2">Login</button>
                 </form>
             </div>
         </div>
