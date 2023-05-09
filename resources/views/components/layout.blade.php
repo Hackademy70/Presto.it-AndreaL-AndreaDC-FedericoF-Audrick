@@ -9,11 +9,16 @@
     {{-- Utilizzo VITE --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     {{$style ?? ''}}
+    @livewireStyles
 </head>
 <body>
 
     <x-navbar />
     {{ $slot }}
     <x-footer />
+
+    @livewireScripts
+    <script src="{{asset('js/app.js')}}"></script>
+    {{$script ?? ''}}
 </body>
 </html>
