@@ -1,3 +1,11 @@
+:root{
+    --main:$ash-gray: rgba(204, 215, 197, 1);
+    --seconadary:$pale-dogwood: rgba(239, 210, 203, 1);
+    --contrast: $davys-gray: rgba(87, 87, 97, 1);
+}
+
+
+
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
