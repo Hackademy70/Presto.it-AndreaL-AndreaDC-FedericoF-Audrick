@@ -6,7 +6,9 @@
     {{-- sezione card --}}
    <div class="container">
     <div class="row">
-        <x-card/>
+        @foreach($announcements as $announcement)
+        <x-card :announcement="$announcement"/>
+        @endforeach
     </div>
    </div>
 </x-layout>

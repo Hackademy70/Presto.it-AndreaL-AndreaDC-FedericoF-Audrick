@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnnouncementController;
 
@@ -16,8 +17,10 @@ use App\Http\Controllers\AnnouncementController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $announcements = Announcement::all();
+    return view('welcome', compact('announcements'));
 })->name('home');
 
 
 Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
+Route::get('/singolo/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
