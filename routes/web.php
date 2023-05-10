@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AnnuncementController;
+use App\Http\Controllers\AnnouncementController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,4 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::get('/nuovo/annuncio', [AnnuncementController::class, 'createAnnouncement'])->name(Announcements.create);
+//Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name(announcement.create);

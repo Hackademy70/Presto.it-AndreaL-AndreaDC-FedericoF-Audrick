@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AnnuncementController extends Controller
+class AnnouncementController extends Controller
 {
     public function createAnnouncement (){
-      return view('announcement.craete');   
+      return view('announcement.create');   
     }
 }

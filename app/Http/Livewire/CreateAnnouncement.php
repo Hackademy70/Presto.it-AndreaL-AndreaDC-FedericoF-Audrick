@@ -8,7 +8,7 @@ class CreateAnnouncement extends Component
 {
     public $title;
     public $body;
-    public $pice;
+    public $price;
 
     public function store(){
 
