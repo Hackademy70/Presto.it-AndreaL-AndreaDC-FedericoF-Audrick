@@ -22,6 +22,14 @@
         <label for="price">prezzo</label>
         <input wire:model="price" type="number" class="form-control">
     </div>
+    <div class="mb-3">
+        <label for="category">categorie</label>
+        <select wire:model="category_id" class="form-control"> 
+            @foreach ($categories as $category) 
+            <option value="{{$category->id}}">{{$category->name}}</option>
+            @endforeach
+        </select>
+    </div>
     <button type="submit">manda</button>
    </form>
 
