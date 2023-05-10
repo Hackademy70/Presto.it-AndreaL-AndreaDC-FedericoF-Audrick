@@ -1,7 +1,9 @@
 <div>
    <h1>crea il tuo annuncio!</h1>
-   @if (session('message')) <span>{{$message}}</span>
-       
+   @if (session()->has('message'))
+   <div>
+       {{session('message')}}
+   </div>
    @endif
    <form wire:submit.prevent="store">
     @csrf
