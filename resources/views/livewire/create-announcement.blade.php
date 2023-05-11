@@ -18,6 +18,10 @@
                     @enderror
                 </div>
                 <div class="mb-3">
+                    <input type="file" wire:model="photo">
+                    @error('photo') <span class="error">{{ $message }}</span> @enderror
+                </div>
+                <div class="mb-3">
                     <label for="body">descrizione</label>
                     <textarea wire:model="body" type="text" class="form-control"></textarea>
                 </div>

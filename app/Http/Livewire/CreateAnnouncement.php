@@ -5,13 +5,16 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class CreateAnnouncement extends Component
 {
+   use WithFileUploads;
     public $title;
     public $body;
     public $price;
     public $category_id;
+    public $photo;
 
     
     protected $rules=[
@@ -19,6 +22,7 @@ class CreateAnnouncement extends Component
         'body'=>'required',
         'price'=>'required',
         'category_id'=>'required',
+        'photo'=>'image'
     ];
 
     public function updated($propertyName){
@@ -33,6 +37,7 @@ class CreateAnnouncement extends Component
         'title'=>$this->title,
         'body'=>$this->body,
         'price'=>$this->price,
+        'photo'=>$this->photo->store('photos'),
        
     ]);
     $this->reset();
