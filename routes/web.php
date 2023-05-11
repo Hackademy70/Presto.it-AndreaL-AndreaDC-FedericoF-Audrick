@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PublicController;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnnouncementController;
@@ -24,3 +25,4 @@ Route::get('/', function () {
 
 Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
 Route::get('/singolo/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
+Route::get('/chisiamo', [PublicController::class, 'chiSiamo'])->name('chisiamo');
