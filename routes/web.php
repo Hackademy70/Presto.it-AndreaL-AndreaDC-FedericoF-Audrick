@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\PublicController;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\PublicController;
 use App\Http\Controllers\AnnouncementController;
 
 
@@ -17,10 +18,7 @@ use App\Http\Controllers\AnnouncementController;
 |
 */
 
-Route::get('/', function () {
-    $announcements = Announcement::all();
-    return view('welcome', compact('announcements'));
-})->name('home');
+Route::get('/', [FrontController::class, 'welcome'])->name('home');
 
 //rotta sicura crea nuovo annnuncio
 Route::middleware(['auth'])->group(function(){
