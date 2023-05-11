@@ -53,7 +53,7 @@
  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="navContain container-fluid mx-5 d-flex">
         <div>
-            <a class="navbar-brand" href="{{ route('home') }}">Navbar</a>
+            <a class="navbar-brand" href="{{ route('home') }}">Home</a>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

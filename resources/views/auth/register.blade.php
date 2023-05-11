@@ -20,7 +20,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">password</label>
-                        <input name="password" title="dio can impara a leggere" pattern="[A-z\d]{7,20}[@#$?!]{1,20}" type="password" class="form-control" id="exampleInputPassword1">
+                        <input name="password" title="non rispetta tutti i parametri" pattern="[A-z\d]{7,20}[@#$?!]{1,20}" type="password" class="form-control" id="exampleInputPassword1">
                         
                     </div>
                     <div class="mb-3">
