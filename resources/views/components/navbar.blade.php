@@ -55,7 +55,7 @@
         <div>
             <a class="navbar-brand" href="{{ route('home') }}">Home</a>
         </div>
-
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -114,7 +114,7 @@
             </li>
             <li class="nav-item"><a class="btn btn-outline-light" href="/logout"
                 onclick="event.preventDefault();
-   getElementById('form-logout').submit()">logout</a>
+                getElementById('form-logout').submit()">logout</a>
             </li>
             
             @endguest
