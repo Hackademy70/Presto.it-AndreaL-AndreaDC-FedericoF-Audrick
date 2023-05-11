@@ -1,7 +1,9 @@
 :root{
     --main: rgba(204, 215, 197, 1);
     --seconadary: rgba(239, 210, 203, 1);
-    --contrast: rgba(87, 87, 97, 1);
+    --main-dark:  rgb(131, 152, 119);
+    --secondary-dark: rgba(209, 166, 158, 1);
+    --contrast: rgb(0, 0, 0);
 }
 
 
@@ -212,5 +214,121 @@ input[type="checkbox"]:checked {
     background-color: rgb(131, 152, 119);
   }
   
+  /*  sezione card annuncio */
+
+  .custom-card {
+    width: 18rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .custom-card img {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .custom-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .custom-card .card-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .custom-card .card-text {
+    color: #666;
+  }
+  
+  .custom-card .price {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-card .btn-primary {
+    background-color: var(--main);
+    border-color: var(--main);
+    color: #000;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  
+  .custom-card .btn-primary:hover {
+    background-color: var(--main-dark);
+    border-color: var(--main-dark);
+  }
+  
+  .custom-card .btn-success {
+    background-color: var(--main);
+    border-color: var(--main);
+    color: #000;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  
+  .custom-card .btn-success:hover {
+    background-color: var(--main-dark);
+    border-color: var(--main-dark);
+  }
+  
+  .custom-card .card-link {
+    padding-top: 0.5rem;
+    color: #000;
+    font-style: italic;
+  }
+  
+  .custom-card .card-footer {
+    color: #777;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
   
 
+  /* MAsthead */
+
+  .highlight-section {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .highlight-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .highlight-description {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  /* i nostri annunci */
+  .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .section-divider {
+    width: 70px;
+    height: 3px;
+    background-color: #333;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 2px;
+  }
+  
