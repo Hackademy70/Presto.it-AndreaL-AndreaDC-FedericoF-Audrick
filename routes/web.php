@@ -22,7 +22,13 @@ Route::get('/', function () {
     return view('welcome', compact('announcements'));
 })->name('home');
 
+//rotta sicura crea nuovo annnuncio
+Route::middleware(['auth'])->group(function(){
+    Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
+});
 
-Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
+//rotta view singolo annuncio
 Route::get('/singolo/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
+//chi siamo
 Route::get('/chisiamo', [PublicController::class, 'chiSiamo'])->name('chisiamo');
+

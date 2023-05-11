@@ -12,7 +12,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">email address</label>
-                        <input name="email"  title="dio can impara a leggere" pattern="[\w\d]{3,30}@[\w\d]{2,7}.[\w]{2,5}" class="form-control"
+                        <input name="email"  tyoe="email" pattern="[\w\d]{3,30}@[\w\d]{2,7}.[\w]{2,5}" class="form-control"
                         id="exampleInputEmail1" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">we will never share your email whit
                             annyone else.
