@@ -15,6 +15,7 @@
 <body>
 
     <x-navbar />
+    <x-navbar-2 />
     {{ $slot }}
     <x-footer />
 
