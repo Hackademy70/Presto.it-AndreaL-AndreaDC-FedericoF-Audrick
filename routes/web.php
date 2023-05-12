@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FrontController;
@@ -29,4 +30,8 @@ Route::middleware(['auth'])->group(function(){
 Route::get('/singolo/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
 //chi siamo
 Route::get('/chisiamo', [PublicController::class, 'chiSiamo'])->name('chisiamo');
-
+// rotta ricerca per categoria
+Route::get('/ricerca/{category}', function(Category $category) {
+    $announcements = Announcement::all();
+    return view('categorySearch', compact('category'), compact('announcements'));
+})->name('category.search');

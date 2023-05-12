@@ -1,19 +1,9 @@
 <div class="container">
     <ul class="d-flex justify-content-between">
+        @foreach ($categories as $category)
         <li>
-            <a href="#">Categoria</a>
+            <a href="{{ route('category.search', compact('category')) }}">{{$category->name}}</a>
         </li>
-        <li>
-            <a href="#">Categoria</a>
-        </li>
-        <li>
-            <a href="#">Categoria</a>
-        </li>
-        <li>
-            <a href="#">Categoria</a>
-        </li>
-        <li>
-            <a href="#">Categoria</a>
-        </li>
+        @endforeach
     </ul>
 </div>
