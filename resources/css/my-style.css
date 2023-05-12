@@ -1,0 +1,31 @@
+/* proprietà generali */
+:root {
+    --prim: rgba(204, 215, 197, 1);
+    --sec: rgba(239, 210, 203, 1);
+    --bg-white: rgb(131, 152, 119);
+    --bg-dark: black;
+}
+body {
+    font-family: "Playfair Display", serif;
+    -webkit-box-sizing: border-box;
+}
+.my-bg-dark {
+    background-color: var(--bg-dark) !important;
+}
+/* fine proprietà generali */
+
+
+/* CSS navbar 2 componente - INIZIO */
+.my-link {
+    color: var(--bg-white);
+    border-bottom: transparent 2px solid;
+    text-decoration: none;
+    font-weight: 500;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.my-link:hover {
+    border-bottom: var(--sec) 2px solid;
+    color: var(--sec);
+}
+/* CSS navbar 2 componente - FINE */

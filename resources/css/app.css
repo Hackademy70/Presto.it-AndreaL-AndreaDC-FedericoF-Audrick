@@ -18,3 +18,7 @@
 
 /* singolo articolo css */
 @import '/resources/css/singoloarticolo.css';
+
+
+/* Foglio di stile custom unico */
+@import '/resources/css/my-style.css';

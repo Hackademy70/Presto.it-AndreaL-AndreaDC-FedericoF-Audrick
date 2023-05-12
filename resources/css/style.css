@@ -10,6 +10,7 @@
 
 body{
   font-family: 'Playfair Display', serif;
+  -webkit-box-sizing: border-box;
 }
 
 input[type="checkbox"]:checked {

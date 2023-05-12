@@ -1,4 +1,4 @@
-<div class="container">
+{{-- <div class="container">
     <ul class="d-flex justify-content-between">
         @foreach ($categories as $category)
         <li>
@@ -6,4 +6,12 @@
         </li>
         @endforeach
     </ul>
-</div>
+</div> --}}
+
+<nav class="container-fluid my-bg-dark px-5 py-2">
+    <div class="d-flex justify-content-between align-item-center px-5">
+        @foreach ($categories as $category)
+            <a class="my-link" href="{{ route('category.search', compact('category')) }}">{!! Str::upper($category->name) !!}</a>
+        @endforeach
+    </div>
+</nav>
