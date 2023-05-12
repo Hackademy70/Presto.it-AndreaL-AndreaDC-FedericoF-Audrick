@@ -20,11 +20,23 @@
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'login') d-none @endif"
                         href="{{ route('login') }}">login</a></li>
             @else
+                    {{-- logica user3 --}}
+                    @if(Auth::user()->is_revisor)
+                    <li>
+                        <a href="{{route('revisor.index')}}">zona revisore
+                            <span>{{App\Models\Announcement::toBeRevisionedCount()}}</span>
+                            <span class="visually-hidden">messagi non letti</span>
+                        </a>
+                    </li>
+                    @endif
+                    {{-- logica user3 --}}
+
+
                 <a href="#" id="close"><i class="far fa-times"></i></a>
 
-                <li><a class=" btn btn-outline-light" href="about.html">i miei annunci</a></li>
+                <li><a class=" btn btn-outline-light" href="#">i miei annunci</a></li>
                 <li><a class=" btn btn-outline-light" href="{{ route('announcement.create') }}">crea annunci</a></li>
-                <li><a class=" btn btn-outline-light" href="about.html">{{ Auth::user()->name }}</a></li>
+                <li><a class=" btn btn-outline-light" href="#">{{ Auth::user()->name }}</a></li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
