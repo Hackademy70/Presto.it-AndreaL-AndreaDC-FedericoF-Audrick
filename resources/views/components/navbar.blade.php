@@ -55,7 +55,7 @@
     <div>
         <ul id="navbar">
             @guest
-            <li class="container-fluid">
+            <li>
                 <form class="d-flex">
                   <input class="inputx form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
@@ -63,11 +63,11 @@
             </li>
             <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
             <!-- <li><a href="shop.html">articoli</a></li>            -->
-            <li><a class="text-white" href="{{ route('chisiamo') }}">Chisiamo</a></li>
-            <li><a class="btn btn-outline-light" href="{{ route('register') }}">registrati</a></li>
+            <li><a class="text-white" href="{{ route('chisiamo') }}">Chi siamo</a></li>
+            <li><a class="btn btn-outline-light @if(Route::currentRouteName() == 'register') d-none @endif" href="{{ route('register') }}">registrati</a></li>
             <!-- <li id ="lg-bag"><a href="cart.html"><i class="far fa-shopping-cart"></i></a></li>-->
             <a href="#" id ="close"><i class="far fa-times"></i></a>
-            <li><a class="btn btn-outline-light" href="{{ route('login') }}">login</a></li>
+            <li><a class="btn btn-outline-light @if(Route::currentRouteName() == 'login') d-none @endif" href="{{ route('login') }}">login</a></li>
             @else
             <a href="#" id ="close"><i class="far fa-times"></i></a>
                 
