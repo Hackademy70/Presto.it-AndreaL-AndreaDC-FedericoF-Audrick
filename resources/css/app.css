@@ -6,3 +6,8 @@
   @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Condensed:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap');
 /* My Style CSS */
 @import '/resources/css/style.css';
+/* font family poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Smokum&display=swap');
+
+/* navbar css */
+@import '/resources/css/navbar.css';

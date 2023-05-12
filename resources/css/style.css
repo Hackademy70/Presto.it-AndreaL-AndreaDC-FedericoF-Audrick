@@ -1,497 +1,290 @@
 :root{
-    --main: rgba(204, 215, 197, 1);
-    --seconadary: rgba(239, 210, 203, 1);
-    --main-dark:  rgb(131, 152, 119);
-    --secondary-dark: rgba(209, 166, 158, 1);
-    --contrast: rgb(0, 0, 0);
+  --main: rgba(204, 215, 197, 1);
+  --seconadary: rgba(239, 210, 203, 1);
+  --main-dark:  rgb(131, 152, 119);
+  --secondary-dark: rgba(209, 166, 158, 1);
+  --contrast: rgb(0, 0, 0);
 }
 
 
 
 body{
-    font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
 }
 
 input[type="checkbox"]:checked {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Smokum&display=swap');
 
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .xbody{
-    font-size: 'Poppins',sans-serif;
-    font-weight: 300;
-    margin: 0 ; 
-    background-color: hsl(0,0%,0%);
+  font-size: 'Poppins',sans-serif;
+  font-weight: 300;
+  margin: 0 ; 
+  background-color: hsl(0,0%,0%);
 
 }
 .x-container{
-    max-width: 1170px;
-    margin: auto;
-    padding: 0 15px;
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
 }
 
 .team{
-    padding: 100px 0 ; 
+  padding: 100px 0 ; 
 }
 
 .team-items{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
-    
+  
 @media(max-width: 991px){
-    .team-items{
-       
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .team-items{
+     
+      grid-template-columns: repeat(2, 1fr);
+  }
 }
-   
+ 
 @media(max-width: 575px){
-    .team-items{
-       
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .team-items{
+     
+      grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 
 .team-item{
-   --color-light-yellow: hsl(38,72%,75%);
-   --color-light-green: hsl(148,61%,70%);
-   --color-light-red: hsl(0,69%,80%);
-   position: relative;
-   overflow: hidden;
+ --color-light-yellow: hsl(38,72%,75%);
+ --color-light-green: hsl(148,61%,70%);
+ --color-light-red: hsl(0,69%,80%);
+ position: relative;
+ overflow: hidden;
 }
 
 .team-item:nth-child(1){
-    --item-color: var(--color-light-yellow) ; 
+  --item-color: var(--color-light-yellow) ; 
 }
 
 
 .team-item:nth-child(2){
-    --item-color: var(--color-light-green) ; 
+  --item-color: var(--color-light-green) ; 
 }
 
 
 .team-item:nth-child(3){
-    --item-color: var(--color-light-red) ; 
+  --item-color: var(--color-light-red) ; 
 }
 
 
 .team-img-box img{
-    max-width: 100%;
-    vertical-align: middle;
-    border-radius:10px ;
-    filter: grayscale(1);
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius:10px ;
+  filter: grayscale(1);
 }
 
 .team-info{
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: 20px; 
-    max-height: calc(100% - 100px);
-    display: flex;
-    flex-direction: column;
-    transition: transform 1.5s ease;
-    transform: translateY(calc(100% + 22px));
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px; 
+  max-height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 1.5s ease;
+  transform: translateY(calc(100% + 22px));
 
 } 
 
 .team-info.show{
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .team-btn{
-    height: 40px;
-    width: 40px;
-    background-color: var(--item-color);
-    border: none;
-    position: absolute;
-    right: 0;
-    top: -60px;
-    border-radius: 50%;
-    font-size: 16px;
-    line-height: 1;
-    cursor: pointer;
-    transition: transform 1.5s ease;
+  height: 40px;
+  width: 40px;
+  background-color: var(--item-color);
+  border: none;
+  position: absolute;
+  right: 0;
+  top: -60px;
+  border-radius: 50%;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 1.5s ease;
 
 }
 
 .team-info.show .team-btn{
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .team-inner{
-    background-color: var(--item-color);
-    border-radius: 10px;
-    padding: 30px;
-    overflow-y: auto;
+  background-color: var(--item-color);
+  border-radius: 10px;
+  padding: 30px;
+  overflow-y: auto;
 }
 
 .team-name{
-   font-size:26px;
-   text-transform: capitalize;
-   margin: 0;
-   line-height: 1.3;
-   font-weight: 600;
-   color: hsl(0,0%,0%) ; 
+ font-size:26px;
+ text-transform: capitalize;
+ margin: 0;
+ line-height: 1.3;
+ font-weight: 600;
+ color: hsl(0,0%,0%) ; 
 }
 
 .team-position{
-    font-weight: 400px ;
-    color: hsl(0,0%,0%); 
-    text-transform: capitalize;
+  font-weight: 400px ;
+  color: hsl(0,0%,0%); 
+  text-transform: capitalize;
 }
 
 .team-text{
-    margin-top: 15px ; 
-    color: hsl(0,0%,0%); 
+  margin-top: 15px ; 
+  color: hsl(0,0%,0%); 
 }
 
 .team-text p{
-    margin: 0 ; 
+  margin: 0 ; 
 }
 
 .team-text p + p {
-    margin-top: 15px; 
+  margin-top: 15px; 
 }
 
 .bannerimg {
-    background-image: url(/public/banner.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .card {
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-header {
-    background-color: #ffffff;
-    padding: 20px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  
-  .card-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #000000;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .card-footer {
-    background-color: #ffffff;
-    padding: 20px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    text-align: center;
-  }
-  
-  .card-footer button {
-    background-color:var(--main);
-    border: none;
-    padding: 10px 30px;
-    font-size: 18px;
-    color: #ffffff;
-    cursor: pointer;
-  }
-  
- 
-  .card-footer button:hover {
-    background-color: rgb(131, 152, 119);
-  }
-  
-  /*  sezione card annuncio */
-
-  .custom-card {
-    width: 18rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #f5f5f5;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .custom-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .custom-card img {
-    border-radius: 10px 10px 0 0;
-  }
-  
-  .custom-card .card-body {
-    padding: 1.5rem;
-  }
-  
-  .custom-card .card-title {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  
-  .custom-card .card-text {
-    color: #666;
-  }
-  
-  .custom-card .price {
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  
-  .custom-card .btn-primary {
-    background-color: var(--main);
-    border-color: var(--main);
-    color: #000;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  }
-  
-  .custom-card .btn-primary:hover {
-    background-color: var(--main-dark);
-    border-color: var(--main-dark);
-  }
-  
-  .custom-card .btn-success {
-    background-color: var(--main);
-    border-color: var(--main);
-    color: #000;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  }
-  
-  .custom-card .btn-success:hover {
-    background-color: var(--main-dark);
-    border-color: var(--main-dark);
-  }
-  
-  .custom-card .card-link {
-    padding-top: 0.5rem;
-    color: #000;
-    font-style: italic;
-  }
-  
-  .custom-card .card-footer {
-    color: #777;
-    font-size: 0.8rem;
-    margin-top: 1rem;
-  }
-  
-
-/* nuova navbar */
-
-:root{
-  --color-main :#344E41 ;
-  --color-secondary: #3A5A40 ;
-  --color-primary : #588157;
-  --color-trezo : #A3B18A;
-  --color-ultimate : #DAD7CD;
+  background-image: url(/public/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-#header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 80px;
-  background-color:var(--color-main);
-  
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  z-index: 999;
-  position: sticky;
-  top: 0;
-  left: 0;
-
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card-header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
   margin: 0;
-  padding: 0;
+  text-align: center;
 }
 
-#navbar li {
-  list-style: none;
-  padding: 0 10px;
-  position: relative;
+.card-footer {
+  background-color: #ffffff;
+  padding: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-align: center;
 }
 
-#navbar li a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  
-  transition: 0.3 ease;
-  /* fluidite de transition du hover*/
-}
-/* 
-#navbar li a:hover {
-  color: #088178;
-} */
-/* 
-#navbar li a:hover,
-#navbar li a.active {
-  color: #088178;
-}
-
-#navbar li a.active::after,
-#navbar li a:hover::after {
-  content: "";
-  width: 30%;
-  height: 2px;
-  background: #088178;
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
-} */
-
-#mobile {
-  display: none;
-  align-items: center;
-}
-
-#close {
-  display: none;
-}
-
-.kta{
-  display: none;
-}
-
-.inputx{
-  min-width:200px;
+.card-footer button {
+  background-color:var(--main);
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 
+.card-footer button:hover {
+  background-color: rgb(131, 152, 119);
+}
 
+/*  sezione card annuncio */
 
-@media (max-width : 768px) {
- 
-  .section-p1{
-      padding: 40px 40px ;
-  }
-  #navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      position: fixed;
-      top: 0;
-      right: -300px;
-      height: 100vh;
-      width: 300px;
-      background-color:var(--color-main);
-      box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-      padding: 80px 0 0 10px;
-      transition: 0.3s;
-  }
+.custom-card {
+  width: 18rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+  transition: transform 0.3s ease-in-out;
+}
 
-  #navbar.active {
-      right: 0px;
-  }
+.custom-card:hover {
+  transform: translateY(-5px);
+}
 
-  #navbar li {
-      margin-bottom: 25px;
-  }
+.custom-card img {
+  border-radius: 10px 10px 0 0;
+}
 
-  #mobile {
-      display: flex;
-      align-items: center;
-  }
+.custom-card .card-body {
+  padding: 1.5rem;
+}
 
-  #mobile i {
-      color: #1a1a1a;
-      font-size: 24px;
-      padding-left: 20px;
-  }
+.custom-card .card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
 
-  #close {
-      display: initial;
-      position: absolute;
-      top: 30px;
-      left: 30px;
-      color: #222;
-      font-size: 24px;
-  }
+.custom-card .card-text {
+  color: #666;
+}
 
-  #lg-bag {
-      display: none;
-  }
+.custom-card .price {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
-  #hero {
+.custom-card .btn-primary {
+  background-color: var(--main);
+  border-color: var(--main);
+  color: #000;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
 
-      height: 70vh;
-      padding: 0 80px ;
-      background-position: top 30% right 30%;
-  }
+.custom-card .btn-primary:hover {
+  background-color: var(--main-dark);
+  border-color: var(--main-dark);
+}
 
-  #feature{
-      justify-content: center;
-  }
+.custom-card .btn-success {
+  background-color: var(--main);
+  border-color: var(--main);
+  color: #000;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
 
-  #feature .fe-box {
-      margin: 15px 15px ;
-  }
+.custom-card .btn-success:hover {
+  background-color: var(--main-dark);
+  border-color: var(--main-dark);
+}
 
-  #product1 .pro-container {
-      justify-content: center ; 
-  }
-  #product1 .pro {
-      margin: 15px ; 
-  }
+.custom-card .card-link {
+  padding-top: 0.5rem;
+  color: #000;
+  font-style: italic;
+}
 
-  #banner {
-      height: 20vh ; 
-  }
-
-  #sm-banner .banner-box{
-      min-width:100%;
-      height: 30vh ; 
-    
-  }
-
-  #banner3{
-      padding: 0 40px ; 
-  }
-
-  #banner3 .banner-box {
-
-      width: 28% ; 
-  }
-
-  #newsletter .form {
-      width: 70% ; 
-  }
-   /* contact page */
-  #form-details {
-      padding: 40px;
-  }
-
-  #form-details form {
-      width: 50%;
-     
-  }
-
-  .kta{
-      display: initial;
-  }
-
+.custom-card .card-footer {
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 1rem;
 }
 
 
-@media (max-width: 576px){
-  #header {
-      padding: 10px 30px ;
-  }
-}
