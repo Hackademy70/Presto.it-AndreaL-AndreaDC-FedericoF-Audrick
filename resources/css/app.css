@@ -26,3 +26,6 @@
 
 /* footer css */
 @import '/resources/css/footer.css';
+
+/* Foglio di stile custom unico */
+@import '/resources/css/my-style.css';

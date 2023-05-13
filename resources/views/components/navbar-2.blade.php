@@ -22,7 +22,7 @@
                 @foreach ($categories as $category)
                     <li>
                         
-                        <a class="nav-link" href="{{ route('category.search', compact('category')) }}">{{ $category->name }}</a>
+                        <a class="nav-link" href="{{ route('category.search', compact('category')) }}">{!! Str::upper($category->name) !!}</a>
                     </li>
                 @endforeach
                 {{-- <a class="nav-link active" aria-current="page" href="#about">io</a>

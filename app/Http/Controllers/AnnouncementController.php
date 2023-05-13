@@ -17,4 +17,6 @@ class AnnouncementController extends Controller
     public function showAnnouncement(Announcement $announcement){
       return view('singolo_annuncio', compact('announcement')); 
     }
+
+    
 }
