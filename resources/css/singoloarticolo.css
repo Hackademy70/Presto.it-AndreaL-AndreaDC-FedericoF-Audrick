@@ -1,2 +1,52 @@
 /* single product */
- 
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+select {
+    display: block ; 
+    padding : 5px 10px ; 
+    margin-bottom: 10px ; 
+}
+
+input {
+    width : 50px;
+    height : 47px ; 
+    padding-left: 16px ; 
+    font-size : 16px ; 
+    margin-right : 10px ; 
+}
+
+.single-pro-details span {
+    line-height : 25px ; 
+}
+
+.single-pro-details h4 {
+    padding : 40px 0 20px 0 ; 
+}
+
+button.normal {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color : #fff ; 
+    background-color:#344E41 ; 
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}

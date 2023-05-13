@@ -5,16 +5,16 @@
     <p class="card-text">{{$announcement->body}}</p>
     <p class="card-text">{{$announcement->category}}</p> --}}
 
-    <div class="container">
+    <div class="container pt-5">
         <div class="row align-items-center">
             <div class="col-6 ">
-                <img src="https://picsum.photos/200" alt="img">
+                <img src="https://picsum.photos/200" alt="img" width="80%" height="80%">
             </div>
             <div class="col-6">
                 <div class="single-pro-details">
-                    <h6>Home / T-Shirt</h6>
-                    <h4>Men's Fashion T Shirt</h4>
-                    <h2>$139,00</h2>
+                    <h6>{{$announcement->category}}</h6>
+                    <h4>{{$announcement->title}}</h4>
+                    <h2>${{$announcement->price}}</h2>
                     <select>
                         <option>Select Size</option>
                         <option>XL</option>
@@ -26,18 +26,7 @@
                     <button class ="normal">Add To Cart</button>
                     <h4>Product Details</h4>
                     <span>
-                        Lorem ipsum dolor sit amet,
-                         consectetur adipiscing elit, 
-                         sed do eiusmod tempor incididunt 
-                         ut labore et dolore magna aliqua.
-                          Ut enim ad minim veniam, quis nostrud 
-                          exercitation ullamco laboris nisi ut 
-                          aliquip ex ea commodo consequat. Duis 
-                          aute irure dolor in reprehenderit in voluptate
-                           velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non
-                             proident, sunt in culpa qui officia 
-                             deserunt mollit anim id est laborum.
+                        {{$announcement->body}}
                     </span>
                 </div>
             </div>

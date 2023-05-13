@@ -1,0 +1,27 @@
+#myNavbar{
+    z-index: 20;
+}
+.navbar {
+    background-color:#588157; 
+    letter-spacing:2px; 
+    
+    font-weight: bold;  
+    /* border-bottom: 1px solid white; */
+    padding-top: 0px; 
+    padding-bottom: 0px; 
+}
+.navbar-nav{
+  text-align: center; 
+  margin: 0 auto;
+}
+.nav-link{
+  color: white !important; 
+  
+}
+.nav-link.active,
+.nav-link:hover{
+    background-color: #344E41; 
+    color: white !important;
+    
+
+}

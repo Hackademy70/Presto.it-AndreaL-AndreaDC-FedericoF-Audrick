@@ -7,6 +7,7 @@
                 <div>
                     {{ session('message') }}
                 </div>
+                <span class="btn btn-success container">{{ session('message') }}</span>
             @endif
             <form wire:submit.prevent="store">
                 @csrf

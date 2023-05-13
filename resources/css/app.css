@@ -2,8 +2,8 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 /* CSS di FontAwesome */
 @import '@fortawesome/fontawesome-free/css/all.min.css';
-/* FontAwesome */
-  @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Condensed:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap');
+/* FontAwesome
+  @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Roboto+Condensed:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap'); */
 /* My Style CSS */
 @import '/resources/css/style.css';
 /* font family poppins */
@@ -12,9 +12,17 @@
 /* navbar css */
 @import '/resources/css/navbar.css';
 
+/* navbar2 css */
+@import '/resources/css/navbar2.css';
+
 /* chisiamo css */
 @import '/resources/css/chisiamo.css';
 
+/* singolo card css */
+@import '/resources/css/card.css';
 
 /* singolo articolo css */
 @import '/resources/css/singoloarticolo.css';
+
+/* footer css */
+@import '/resources/css/footer.css';
