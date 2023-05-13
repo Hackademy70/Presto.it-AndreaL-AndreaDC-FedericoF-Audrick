@@ -12,7 +12,7 @@
             </div>
             <div class="col-6">
                 <div class="single-pro-details">
-                    <h6>{{$announcement->category}}</h6>
+                    <h6>{{$announcement->category->name}}</h6>
                     <h4>{{$announcement->title}}</h4>
                     <h2>${{$announcement->price}}</h2>
                     <select>
