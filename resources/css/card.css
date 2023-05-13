@@ -78,22 +78,22 @@
 
 }
 
-
-
-@media (max-width : 799px) {
+@media (max-width : 768px) {
     .pro-container {
         justify-content: center ; 
     }
 
     .pro {
         margin: 15px ; 
+       
     }
 
     
 }
 
-@media (max-width: 477px){
+
+@media (max-width: 576px){
     .pro {
         width: 100% ; 
     }
-}
+} 
