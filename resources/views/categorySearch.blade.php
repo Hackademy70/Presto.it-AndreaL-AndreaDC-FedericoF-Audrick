@@ -3,7 +3,7 @@
 
    
     {{-- sezione card ricerca per categoria--}}
-    <div class="container">
+    <div class="container" style="height:85vh">
         <div class="row">
           <div class="col-12">
             <div class="section-header">
@@ -24,7 +24,7 @@
                 </div>
               </div> --}}
 
-              <div class="col col-3">
+              <div class="col-12 col-3" >
                 <div class=" pro">
                     <img src="https://picsum.photos/200" alt="">
                     <div class="des">

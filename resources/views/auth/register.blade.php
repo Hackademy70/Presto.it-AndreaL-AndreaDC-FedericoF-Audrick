@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container">
+    <div class="container" style="height:75vh">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-lg-4 my-3 ">
                 <h1 class="text-center text-success"> registrati!</h1>
