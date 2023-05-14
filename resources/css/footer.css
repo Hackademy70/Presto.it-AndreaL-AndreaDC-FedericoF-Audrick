@@ -61,10 +61,12 @@ footer .install img {
 
 footer .follow i:hover,
 footer a:hover {
-    color: #344E41;
+    color: white;
 }
 
 footer .copyright {
+
     width: 100%;
     text-align: center;
+    
 }

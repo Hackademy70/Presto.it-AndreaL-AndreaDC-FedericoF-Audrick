@@ -1,6 +1,16 @@
+
+.pro-container {
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+
 .pro {
-    width: 23px;
-    min-width: 250px;
+    /* width: 23px;
+    min-width: 250px; */
     padding: 10px 12px;
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -77,7 +87,7 @@
     right: 60px;
 
 }
-
+/* 
 @media (max-width : 768px) {
     .pro-container {
         justify-content: center ; 
@@ -89,11 +99,11 @@
     }
 
     
-}
+} */
 
-
+/* 
 @media (max-width: 576px){
     .pro {
         width: 100% ; 
     }
-} 
+}  */

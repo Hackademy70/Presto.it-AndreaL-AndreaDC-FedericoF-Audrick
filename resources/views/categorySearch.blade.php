@@ -24,8 +24,8 @@
                 </div>
               </div> --}}
 
-              <div class="col-12 col-3" >
-                <div class=" pro">
+              <div class=" col-12 col-lg-3 col-md-6 col-sm-12" >
+                <div class="pro">
                     <img src="https://picsum.photos/200" alt="">
                     <div class="des">
                         <span>{{$element->created_at->format('d/m/y')}}</span>
