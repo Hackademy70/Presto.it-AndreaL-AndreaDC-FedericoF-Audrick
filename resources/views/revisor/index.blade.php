@@ -19,25 +19,13 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="...">
+                            <img src="https://picsum.photos/200" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>{{$announcement_to_check->title}}</h5>
                                 <p>{{$announcement_to_check->body}}</p>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>{{$announcement_to_check->title}}</h5>
-                                    <p>{{$announcement_to_check->body}}</p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="..." class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>{{$announcement_to_check->title}}</h5>
-                                    <p>{{$announcement_to_check->body}}</p>
-                                </div>
+                      
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
