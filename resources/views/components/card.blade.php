@@ -1,5 +1,3 @@
-
-
 <div class="col col-3">
     <div class="pro">
         <img src="https://picsum.photos/200" alt="">
@@ -14,7 +12,7 @@
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
           </div>
-          <h4>${{ $announcement->price }}</h4>
+          <h4>{{ $announcement->price }}</h4>
 
 
         </div>

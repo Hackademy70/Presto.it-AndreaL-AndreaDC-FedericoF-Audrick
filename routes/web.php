@@ -34,12 +34,12 @@ Route::middleware(['auth'])->group(function () {
 
 
 //home revisore
-Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('is_Revisor')->name('revisor.index');
+Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 //accetta annuncio
 Route::patch('/accetta/annuncio/{announcement}', [RevisorController::class, 'acceptAnnouncement'])
-->middleware('is_Revisor')->name('revisor.accept_announcement');
+->middleware('isRevisor')->name('revisor.accept_announcement');
 
 //rifiuta annuncio
 Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rejectAnnouncement'])
-->middleware('is_Revisor')->name('revisor.reject_announcement');
+->middleware('isRevisor')->name('revisor.reject_announcement');
