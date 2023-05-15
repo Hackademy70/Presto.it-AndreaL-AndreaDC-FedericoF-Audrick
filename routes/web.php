@@ -28,9 +28,20 @@ Route::get('/ricerca/{category}', [FrontController::class, 'searchCategory'])->n
 //rotta sicura crea nuovo annnuncio
 Route::middleware(['auth'])->group(function () {
     Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->name('announcement.create');
-    //rotta view singolo annuncio
-    Route::get('/singolo/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
 });
+//rotta view singolo annuncio
+Route::get('/singolo/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcement.show');
+
+
+
+// rotta chiedi di diventare REVISORE
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+
+//rendi utente revisore
+Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+
+
 
 
 //home revisore
