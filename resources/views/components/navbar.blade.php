@@ -10,6 +10,23 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </li>
+
+            {{-- FLAG --}}
+            <li class="nav-item">
+                <x-_locale lang="it" nation="it"/>
+            </li>
+            <li class="nav-item">
+                <x-_locale lang="es" nation="es"/>
+            </li>
+            <li class="nav-item">
+                <x-_locale lang="en" nation="gb"/>
+            </li>
+            {{-- FLAG --}}
+
+
+
+
+
             @guest
                 <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
                 <!-- <li><a href="shop.html">articoli</a></li>            -->

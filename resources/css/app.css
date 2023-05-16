@@ -29,3 +29,8 @@
 
 /* Foglio di stile custom unico */
 @import '/resources/css/my-style.css';
+
+
+
+/* FLAG - NON TOCCARE */
+@import "/node_modules/flag-icon-css/css/flag-icons.min.css";

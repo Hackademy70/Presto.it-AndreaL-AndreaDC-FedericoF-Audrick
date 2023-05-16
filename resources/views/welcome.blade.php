@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col-12">
             <div class="section-header">
-              <h1 class="section-title">I Nostri Annunci</h1>
+              <h1 class="section-title">{{__('ui.allAnnouncements')}}</h1>
               <div class="section-divider"></div>
             </div>
             <div class="row">
