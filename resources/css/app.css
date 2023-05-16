@@ -30,12 +30,7 @@
 /* Foglio di stile custom unico */
 @import '/resources/css/my-style.css';
 
-<<<<<<< HEAD
-/* libreria bandiere */
-@import '/node_modules/flag-icon-css/css/flag-icons.min.css';
-=======
 
 
 /* FLAG - NON TOCCARE */
-@import "/node_modules/flag-icon-css/css/flag-icons.min.css";
->>>>>>> 5ceb3742ce5bebf65692e23993a7e0c4ca239276
+/* @import "/node_modules/flag-icon-css/css/flag-icons.min.css"; */

@@ -12,12 +12,6 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.3",
-<<<<<<< HEAD
-        "flag-icon": "^2.5.0",
-        "flag-icon-css": "^4.1.7",
-        "flag-icons": "^6.6.6"
-=======
         "flag-icon-css": "^4.1.7"
->>>>>>> 5ceb3742ce5bebf65692e23993a7e0c4ca239276
     }
 }
