@@ -10,6 +10,7 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </li>
+<<<<<<< HEAD
             <li class="nav-item">
                 <x_locale lang='en' nation='gb'/> 
              </li>
@@ -19,6 +20,25 @@
              <li class="nav-item">
                  <x_locale lang='es' nation='es' /> 
              </li>
+=======
+
+            {{-- FLAG --}}
+            <li class="nav-item">
+                <x-_locale lang="it" nation="it"/>
+            </li>
+            <li class="nav-item">
+                <x-_locale lang="es" nation="es"/>
+            </li>
+            <li class="nav-item">
+                <x-_locale lang="en" nation="gb"/>
+            </li>
+            {{-- FLAG --}}
+
+
+
+
+
+>>>>>>> 5ceb3742ce5bebf65692e23993a7e0c4ca239276
             @guest
                 <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
                 <!-- <li><a href="shop.html">articoli</a></li>            -->

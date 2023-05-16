@@ -66,3 +66,10 @@ Route::controller(RevisorController::class)->group( function() {
     //fine EXTRA User 3
 });
 // FINE REVISORE
+
+
+
+
+
+//LINGUE ROTTA PROVA
+Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
