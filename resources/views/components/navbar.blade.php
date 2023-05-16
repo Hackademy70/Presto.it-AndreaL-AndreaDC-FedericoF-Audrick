@@ -10,6 +10,17 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </li>
+<<<<<<< HEAD
+            <li class="nav-item">
+                <x_locale lang='en' nation='gb'/> 
+             </li>
+             <li class="nav-item">
+                 <x_locale lang='it' nation='it' /> 
+             </li>
+             <li class="nav-item">
+                 <x_locale lang='es' nation='es' /> 
+             </li>
+=======
 
             {{-- FLAG --}}
             <li class="nav-item">
@@ -27,6 +38,7 @@
 
 
 
+>>>>>>> 5ceb3742ce5bebf65692e23993a7e0c4ca239276
             @guest
                 <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
                 <!-- <li><a href="shop.html">articoli</a></li>            -->
@@ -37,6 +49,7 @@
                 <a href="#" id="close"><i class="far fa-times"></i></a>
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'login') d-none @endif"
                         href="{{ route('login') }}">login</a></li>
+                        
             @else
             <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
 
