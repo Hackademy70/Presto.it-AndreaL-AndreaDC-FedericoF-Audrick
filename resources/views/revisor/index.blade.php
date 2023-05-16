@@ -1,18 +1,19 @@
 <x-layout>
 
-    <div class="container">
+   <div class="container">
         <div class="row">
             <div class="col-12">
                 <h1>{!!$announcement_to_check ? "ecco annuncio da revisionare" : "non ci sono annunci"!!}</h1>
-                {{-- EXTRA --}}
-                <div class="col-6">
+               
+                <div class="col-12">
                     <form action="{{route('revisor.getback', ['announcement'=>$announcement])}}" method="POST">
                         @csrf
                         @method('PATCH')
-                        <button type="submit">annulla ultima revisione</button>    
+                        <button  class="btn btn-warning container text-white" type="submit">annulla ultima revisione</button>    
                     </form>
                 </div>
-                {{-- fine EXTRA --}}
+                
+                
             </div>
         </div>
     </div>
