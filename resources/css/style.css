@@ -146,4 +146,44 @@ input[type="checkbox"]:checked {
   margin-top: 1rem;
 }
 
+  .section-header {
+        margin-bottom: 2rem;
+    }
 
+    .section-divider {
+        width: 50px;
+        height: 2px;
+        background-color: #333;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+
+    .product-date {
+        font-size: 14px;
+        color: #888;
+    }
+
+    .product-title {
+        font-size: 18px;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-rating {
+        color: #f8ce0b;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-price {
+        font-size: 24px;
+    }
+
+    .product-link {
+        color: #333;
+        font-size: 20px;
+        transition: color 0.3s ease;
+    }
+
+    .product-link:hover {
+        color: #f8ce0b;
+    }
+  
