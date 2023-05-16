@@ -22,8 +22,9 @@ class CreateAnnouncement extends Component
         'body'=>'required',
         'price'=>'required',
         'category_id'=>'required',
-        'photo'=>'image'
     ];
+
+    
 
     public function updated($propertyName){
         $this->validateOnly($propertyName);
@@ -37,7 +38,8 @@ class CreateAnnouncement extends Component
         'title'=>$this->title,
         'body'=>$this->body,
         'price'=>$this->price,
-        'photo'=>$this->photo->store('photos'),
+        // 'photo'=>$this->photo->store('photos'),
+        'photo'=>null,
        
     ]);
     $this->reset();

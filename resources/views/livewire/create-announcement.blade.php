@@ -4,9 +4,6 @@
         <div class="col-12 col-lg-4">
             <h1>Crea il tuo annuncio!</h1>
             @if (session()->has('message'))
-                <div>
-                    {{ session('message') }}
-                </div>
                 <span class="btn btn-success container">{{ session('message') }}</span>
             @endif
             <form wire:submit.prevent="store">
@@ -18,17 +15,23 @@
                         <span class="error text-danger">{{ $message }}</span>
                     @enderror
                 </div>
-                <div class="mb-3">
+                {{-- <div class="mb-3">
                     <input type="file" wire:model="photo">
                     @error('photo') <span class="error">{{ $message }}</span> @enderror
-                </div>
+                </div> --}}
                 <div class="mb-3">
                     <label for="body">descrizione</label>
                     <textarea wire:model="body" type="text" class="form-control"></textarea>
+                    @error('body')
+                    <span class="error text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="price">prezzo</label>
                     <input wire:model="price" type="number" class="form-control">
+                    @error('price')
+                    <span class="error text-danger">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="category">categorie</label>
@@ -37,6 +40,9 @@
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
                     </select>
+                    {{-- @error('category')
+                    <span class="error text-danger">{{ $message }}</span>
+                    @enderror --}}
                 </div>
                 <button class="btn btn-dark container" type="submit">manda</button>
             </form>
