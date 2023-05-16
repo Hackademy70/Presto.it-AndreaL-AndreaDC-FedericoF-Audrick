@@ -29,3 +29,6 @@
 
 /* Foglio di stile custom unico */
 @import '/resources/css/my-style.css';
+
+/* libreria bandiere */
+@import '/node_modules/flag-icon-css/css/flag-icons.min.css';
