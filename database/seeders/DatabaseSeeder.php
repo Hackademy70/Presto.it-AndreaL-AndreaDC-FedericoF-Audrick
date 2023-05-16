@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             'casa',
             'auto',
             'animali',
-            'eletronica',
+            'elettronica',
         ];
         foreach ($categories as $category){
          Category::create(['name'=>$category]);   

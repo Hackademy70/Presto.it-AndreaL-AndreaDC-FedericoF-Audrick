@@ -3,13 +3,14 @@
 
     <div>
         <ul id="navbar">
+            <li>
+                {{-- orm di ricerca --}}
+                <form class="d-flex" action="{{route('search.announcements')}}" method="GET">
+                    <input name="searched" class="inputx form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </li>
             @guest
-                <li>
-                    <form class="d-flex">
-                        <input class="inputx form-control me-2" type="search" placeholder="Search" aria-label="Search" >
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </li>
                 <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
                 <!-- <li><a href="shop.html">articoli</a></li>            -->
                 <li><a class="text-white" href="{{ route('chisiamo') }}">Chi siamo</a></li>

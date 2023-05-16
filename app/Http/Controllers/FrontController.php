@@ -28,4 +28,12 @@ class FrontController extends Controller
   }
 
 
+
+  //rotta ricerca TNTsearch
+  public function search(Request $request) {
+
+    $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(10);
+
+    return view('announcement.index', compact('announcements'));
+  }
 }

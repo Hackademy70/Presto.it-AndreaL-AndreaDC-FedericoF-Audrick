@@ -4,13 +4,30 @@ namespace App\Models;
 
 use App\Models\User;
 use App\Models\Category;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Announcement extends Model
 {
-    use HasFactory;
+    use HasFactory, Searchable;
     protected $fillable = ['user_id','category_id','title','body','price'];
+
+    // TNTSearch
+    public function toSearchableArray(){
+        $category = $this->category;
+        $array = [
+            'id' => $this->id,
+            'title' => $this->title,
+            'body' => $this->body,
+            'price' => $this->price,
+            'category' => $category,
+        ];
+        return $array;
+    }
+    //tntSearch
+
+
     //relazione user annuncio 1-N
     public function user(){
         return $this->belongsTo(User::class);
