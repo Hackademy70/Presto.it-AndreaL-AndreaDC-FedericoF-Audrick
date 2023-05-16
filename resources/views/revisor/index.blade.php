@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>{!!$announcement_to_check ? "ecco annuncio da revisionare" : "non ci sono annunci"!!}</h1>
-               
+                @if($announcement)
                 <div class="col-12">
                     <form action="{{route('revisor.getback', ['announcement'=>$announcement])}}" method="POST">
                         @csrf
@@ -12,6 +12,7 @@
                         <button  class="btn btn-warning container text-white" type="submit">annulla ultima revisione</button>    
                     </form>
                 </div>
+                @endif
                 
                 
             </div>
