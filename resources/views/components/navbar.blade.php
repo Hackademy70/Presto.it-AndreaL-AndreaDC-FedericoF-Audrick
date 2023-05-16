@@ -21,6 +21,8 @@
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'login') d-none @endif"
                         href="{{ route('login') }}">login</a></li>
             @else
+            <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
+
                     {{-- logica user3 --}}
                     @if(Auth::user()->is_revisor)
                     <li>
@@ -38,9 +40,9 @@
                 <li><a class=" btn btn-outline-light" href="{{ route('become.revisor') }}">Lavora con noi</a></li>
                 {{-- fine rotta chiedi di lavorare con noi(revisore) --}}
 
-                <li><a class=" btn btn-outline-light" href="#">i miei annunci</a></li>
+                {{-- <li><a class=" btn btn-outline-light" href="#">i miei annunci</a></li> --}}
                 <li><a class=" btn btn-outline-light" href="{{ route('announcement.create') }}">crea annunci</a></li>
-                <li><a class=" btn btn-outline-light" href="#">{{ Auth::user()->name }}</a></li>
+                <li class="nav-link">{{ Auth::user()->name }}</li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
