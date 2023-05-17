@@ -187,3 +187,9 @@ input[type="checkbox"]:checked {
         color: #f8ce0b;
     }
   
+    /* img form */
+    .img-preview{
+      height: 200px;
+      width: 200px;
+      background-size: cover;
+    }
