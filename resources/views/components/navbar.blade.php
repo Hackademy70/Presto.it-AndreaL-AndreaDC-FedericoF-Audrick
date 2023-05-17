@@ -10,16 +10,16 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </li>
-
+           
             {{-- FLAG --}}
             <li class="nav-item">
-                <x-_locale lang="it" nation="it"/>
+                <x-_locale lang="it"/>
             </li>
             <li class="nav-item">
-                <x-_locale lang="es" nation="es"/>
+                <x-_locale lang="es"/>
             </li>
             <li class="nav-item">
-                <x-_locale lang="en" nation="gb"/>
+                <x-_locale lang="en"/>
             </li>
             {{-- FLAG --}}
 
