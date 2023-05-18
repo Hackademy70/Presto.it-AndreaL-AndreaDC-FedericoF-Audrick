@@ -3,20 +3,23 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1>{!! $announcement_to_check ? 'ecco annuncio da revisionare' : 'non ci sono annunci' !!}</h1>
-                @if ($announcement)
-                    <div class="col-12">
-                        <form action="{{ route('revisor.getback', ['announcement' => $announcement]) }}" method="POST">
-                            @csrf
-                            @method('PATCH')
-                            <button class="btn btn-warning container text-white" type="submit">annulla ultima
-                                revisione</button>
-                        </form>
-                    </div>
+                <h1>{!!$announcement_to_check ? "ecco annuncio da revisionare" : "non ci sono annunci"!!}</h1>
+                {{-- PUSANTE ANNULLA ULTIMA REVISIONE --}}
+                @if($announcement)
+                <div class="col-12">
+                    <form action="{{route('revisor.getback', ['announcement'=>$announcement])}}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button  class="btn btn-warning container text-white" type="submit">annulla ultima revisione</button>    
+                    </form>
+                </div>
                 @endif
+                {{-- FINE PUSANTE ANNULLA ULTIMA REVISIONE --}}
             </div>
         </div>
     </div>
+
+    {{-- Annunci da revisionare --}}
     @if ($announcement_to_check)
         <section id="prodetails" class="section-p1">
             <div class="single">
@@ -28,7 +31,25 @@
                                     <div class="carousel-item @if ($loop->first) active @endif">
                                         <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded"
                                             alt="...">
+                            
+                            {{-- aggiunta ora API--}}
+                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                            <p>Non adatto: <span class="{{$image->racy}}"></span></p>
+                            {{-- fine aggiunta --}}
+
+
+                            @if ($image->labels)
+                            <p>TAGS:</p>
+                            @foreach ($image->labels as $label)
+                                <span style="cursor: default" class="btn btn-dark mb-2">{{ $label }}</span class="btn btn-dark mb-2">
+                            @endforeach
+                                
+                            @endif
                                     </div>
+
                                 @endforeach
                             </div>
                         @else
@@ -142,7 +163,12 @@
             </div>
             </div>
         </section>
+        
+       
+           
 
+
+        {{-- PULSANTI ACCETTA E RIFIUTA --}}
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -166,7 +192,8 @@
                 </div>
             </div>
         </div>
-
-
+        {{-- fine PULSANTI ACCETTA E RIFIUTA --}}
+        
+        
     @endif
 </x-layout>

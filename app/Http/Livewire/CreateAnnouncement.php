@@ -5,7 +5,10 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 
+use App\Jobs\RemoveFaces;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -73,15 +76,27 @@ class CreateAnnouncement extends Component
     public function store(){
         
         $this->validate();
+
         $category=Category::find($this->category_id);
         $this->announcement = $category->announcements()->create($this->validate());
         $this->announcement->user()->associate(Auth::user()->id);
         $this->announcement->save();
         if(count($this->images)){
             foreach ($this->images as $image){
-                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+                $newImage = $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+                
+                // $newFileName = "announcement/{$this->announcement->id}";
+                // $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                dispatch(new RemoveFaces($newImage->id));
+
+                // riga per verifica google vision
+                dispatch(new GoogleVisionSafeSearch($newImage->id));
+                dispatch(new GoogleVisionLabelImage($newImage->id));
             }
+
         }
+
+
         session()->flash('message', 'articolo inserito con sucesso, sara publico dopo la revisione');
         $this->cleanForm();
     }

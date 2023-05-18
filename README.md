@@ -1,14 +1,11 @@
 php artisan migrate:fresh --seed
 
-<<<<<<< HEAD
 sistemare drop down categorie 
 fare uscire errori form
 
 
-=======
 
 
-## cose da sistemare:
+## NON CANCELLARE
 
-- far uscire gli errori nei form
->>>>>>> 319b2679abb1a0742cce40c6e180d8dae31e068c
+ - Se dovesse dare problemi con la GD Library extension not avaible on your PHP installation -> decommentare dal file php.ini la riga extension=gd
