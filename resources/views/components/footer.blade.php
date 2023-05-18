@@ -61,11 +61,11 @@
         <h4>Install App</h4>
         <p>From App Store or Google Play</p>
         <div class="line row">
-            <img class="col-6" src="{{ Storage::url('img/pay/app.jpg') }}" alt="">
-            <img class="col-6" src="{{ Storage::url('img/pay/play.jpg') }}" alt="">
+            <img class="col-6" src="{{ Storage::url('images/pay/app.jpg') }}" alt="">
+            <img class="col-6" src="{{ Storage::url('images/pay/play.jpg') }}" alt="">
         </div>
         <p>Secured Payment Gateways</p>
-        <img src="{{ Storage::url('img/pay/pay.png') }}" alt="">
+        <img src="{{ Storage::url('images/pay/pay.png') }}" alt="">
     </div>
 
     <div class="copyright">

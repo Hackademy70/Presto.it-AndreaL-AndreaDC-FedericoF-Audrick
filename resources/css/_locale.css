@@ -1,0 +1,85 @@
+
+.select-menu .select-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 22px;
+    /* position: relative; */
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+
+.select-btn .icon-arrow {
+
+    transition: 1s;
+}
+
+.select-btn.active .icon-arrow {
+    transform: rotate(360deg);
+}
+
+.select-menu .list {
+    position: absolute;
+
+    transform: translateY(5px);
+
+    margin-top: 5px;
+}
+
+.list {
+    z-index: 19;
+    margin-left: -34px;
+
+}
+
+.list .option {
+    display: flex;
+    align-items: center;
+    height: 55px;
+    background: #fff;
+    padding: 20px;
+    cursor: pointer;
+    transform-origin: top;
+    opacity: 0;
+    transform: scale(0) translateY(-65px);
+     margin-bottom: -55px;
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out, margin-bottom .2s ease-in-out;
+    ;
+    transition-delay: calc(.1s*var(--i));
+}
+
+.list .option:nth-child(2),
+.list .option:nth-child(3) {
+    margin-top: 10px;
+}
+
+.select-btn.active~.list .option {
+    transition: opacity .1s ease-in-out, transform .5s ease-in-out, margin-bottom .2s ease-in-out;
+    transition-delay: calc(.1s * var(--i));
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+.list .option:hover {
+    background: #f2f2f2;
+}
+
+.list .option {
+    border-radius: 8px;
+
+}
+
+
+@media (max-width: 576px) {
+    
+   
+.list .option:nth-child(2),
+.list .option:nth-child(3) {
+    margin-top: -10px;
+}
+
+}
+
