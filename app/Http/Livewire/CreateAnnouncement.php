@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 
+use App\Jobs\RemoveFaces;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
@@ -86,7 +87,8 @@ class CreateAnnouncement extends Component
                 
                 // $newFileName = "announcement/{$this->announcement->id}";
                 // $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
-                
+                dispatch(new RemoveFaces($newImage->id));
+
                 // riga per verifica google vision
                 dispatch(new GoogleVisionSafeSearch($newImage->id));
                 dispatch(new GoogleVisionLabelImage($newImage->id));
