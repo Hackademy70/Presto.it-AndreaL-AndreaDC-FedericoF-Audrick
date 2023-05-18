@@ -28,7 +28,7 @@
                 <div class="select-btn" id="select-btn">
                     <!-- <span id="text">Dropdown select</span> -->
                     {{-- <ion-icon name="chevron-down-outline" class="icon-arrow"></ion-icon> --}}
-                    <i class="fa-solid fa-language"></i>
+                    <i class="icon-arrow fa-solid fa-language"></i>
                 </div>
                 <ul class="list">
                     <li class="option" style="--i:1;">
