@@ -29,7 +29,7 @@
                     <!-- <span id="text">Dropdown select</span> -->
                     {{-- <ion-icon name="chevron-down-outline" class="icon-arrow"></ion-icon> --}}
                     <img class="icon-arrow" src="vendor/blade-flags/language-es.svg" width="32px" height="32px"
-                    alt="">   
+                    alt="">
                 </div>
                 <ul class="list">
                     <li class="option" style="--i:1;">
@@ -58,7 +58,7 @@
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'register') d-none @endif"
                         href="{{ route('register') }}">registrati</a></li>
                 <!-- <li id ="lg-bag"><a href="cart.html"><i class="far fa-shopping-cart"></i></a></li>-->
-                <a href="#" id="close"><i class="far fa-times"></i></a>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'login') d-none @endif"
                         href="{{ route('login') }}">login</a></li>
                         
@@ -76,8 +76,9 @@
                 @endif
                 {{-- logica user3 --}}
 
-
-                <a href="#" id="close"><i class="far fa-times"></i></a>
+                {{-- Icona chiusura navbar MOBILE --}}
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+                {{-- fine Icona chiusura navbar MOBILE --}}
                 {{-- rotta chiedi di lavorare con noi(revisore) --}}
                 <li><a class=" btn btn-outline-light" href="{{ route('become.revisor') }}">Lavora con noi</a></li>
                 {{-- fine rotta chiedi di lavorare con noi(revisore) --}}
@@ -111,8 +112,10 @@
         </ul>
     </div>
     <div id="mobile">
-        <a href=""><i class="far fa-shopping-cart"></i></a>
-        <i id="bar" class="fas fa-outdent"></i>
+        {{-- Carrello ICONA -> pagina ancora inesistente --}}
+        {{-- <a href=""><i class="far fa-shopping-cart"></i></a> --}}
+        {{-- Carrello ICONA -> pagina ancora inesistente --}}
+        <i id="bar" class="fa-solid fa-bars"></i>
     </div>
 </section>
 

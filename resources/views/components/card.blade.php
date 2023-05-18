@@ -1,4 +1,3 @@
-
 <div class=" col-12 col-lg-3 col-md-6 col-sm-12 ">
     <div class="pro">
         <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->
@@ -16,8 +15,10 @@
             </div>
             <h4>{{ $announcement->price }}</h4>
         </div>
-        <a href="#"><i class="fa-sharp fa-light fa-eye cart"></i></a>
+        {{-- Icona carrello -> pagina non ancora creata --}}
+        {{-- <a href="#"><i class="fa-sharp fa-light fa-eye cart"></i></a> --}}
+        {{-- Fine Icona carrello -> pagina non ancora creata --}}
         <a href="{{ route('announcement.show', ['announcement' => $announcement]) }}"><i
-                class="fa-sharp fa-light fa-eye eye"></i></a>
+                class="fa-solid fa-light fa-eye cart text-center"></i></a>
     </div>
 </div>
