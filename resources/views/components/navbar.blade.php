@@ -12,22 +12,11 @@
                 </form>
             </li>
 
-            {{-- FLAG --}}
-            {{-- <li class="nav-item">
-                <x-_locale lang="it"/>
-            </li>
-            <li class="nav-item">
-                <x-_locale lang="es"/>
-            </li>
-            <li class="nav-item">
-                <x-_locale lang="en"/>
-            </li> --}}
-            {{-- FLAG --}}
+        
 
             <div class="select-menu">
                 <div class="select-btn" id="select-btn">
-                    <!-- <span id="text">Dropdown select</span> -->
-                    {{-- <ion-icon name="chevron-down-outline" class="icon-arrow"></ion-icon> --}}
+                   
                     <i class="icon-arrow fa-solid fa-language"></i>
                 </div>
                 <ul class="list">
@@ -60,6 +49,26 @@
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'login') d-none @endif"
                         href="{{ route('login') }}">login</a></li>
+                        <div class="selectmenu">
+                            <div class="selectbtn" id="selectbtn">
+                               
+                                <i class="iconarrow fa-solid fa-language"></i>
+                            </div>
+                            <ul class="lista">
+                                <li class="optione" style="--i:1;">
+                                    <x-_locale class="" lang="it" />
+                                    
+                                </li>
+                                <li class="optione" style="--i:2;">
+                                    <x-_locale class="" lang="es" />
+                                    
+                                </li>
+                                <li class="optione" style="--i:3;">
+                                    <x-_locale class="" lang="en" />
+                                    
+                                </li>
+                            </ul>
+                        </div>
                         
             @else
                 <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
@@ -106,6 +115,26 @@
                       <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                     </ul>
                 </li>
+                <div class="selectmenu">
+                    <div class="selectbtn" id="selectbtn">
+                       
+                        <i class="iconarrow fa-solid fa-language"></i>
+                    </div>
+                    <ul class="lista">
+                        <li class="optione" style="--i:1;">
+                            <x-_locale class="" lang="it" />
+                            
+                        </li>
+                        <li class="optione" style="--i:2;">
+                            <x-_locale class="" lang="es" />
+                            
+                        </li>
+                        <li class="optione" style="--i:3;">
+                            <x-_locale class="" lang="en" />
+                            
+                        </li>
+                    </ul>
+                </div>
             @endguest
 
         </ul>
@@ -150,6 +179,27 @@
 
 
     for (options of option) {
+        options.onclick = function() {
+            
+            selectBtn.innerHTML = this.innerHTML;
+            selectBtn.classList.remove('active');
+        }
+    }
+
+    const selectBtn2 = document.getElementById("selectbtn");
+   
+    const optione = document.getElementsByClassName("optione");
+    // const icon = document.getElementsByClassName("icon");
+    
+    
+
+    selectBtn2.addEventListener('click', function() {
+        selectBtn2.classList.toggle('active');
+
+    });
+
+
+    for (options of optione) {
         options.onclick = function() {
             
             selectBtn.innerHTML = this.innerHTML;
