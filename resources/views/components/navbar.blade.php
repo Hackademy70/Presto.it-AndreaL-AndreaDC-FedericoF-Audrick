@@ -28,8 +28,7 @@
                 <div class="select-btn" id="select-btn">
                     <!-- <span id="text">Dropdown select</span> -->
                     {{-- <ion-icon name="chevron-down-outline" class="icon-arrow"></ion-icon> --}}
-                    <img class="icon-arrow" src="vendor/blade-flags/language-es.svg" width="32px" height="32px"
-                    alt="">
+                    <i class="fa-solid fa-language"></i>
                 </div>
                 <ul class="list">
                     <li class="option" style="--i:1;">
@@ -68,7 +67,7 @@
                 {{-- logica user3 --}}
                 @if (Auth::user()->is_revisor)
                     <li>
-                        <a href="{{ route('revisor.index') }}">zona revisore
+                        <a class="btn btn-outline-light" href="{{ route('revisor.index') }}">zona revisore
                             <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
                             <span class="visually-hidden">messagi non letti</span>
                         </a>
@@ -78,7 +77,7 @@
 
                 {{-- Icona chiusura navbar MOBILE --}}
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
-                {{-- fine Icona chiusura navbar MOBILE --}}
+                {{-- fineIcona chiusura navbar MOBILE --}}
                 {{-- rotta chiedi di lavorare con noi(revisore) --}}
                 <li><a class=" btn btn-outline-light" href="{{ route('become.revisor') }}">Lavora con noi</a></li>
                 {{-- fine rotta chiedi di lavorare con noi(revisore) --}}
