@@ -4,6 +4,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>{!!$announcement_to_check ? "ecco annuncio da revisionare" : "non ci sono annunci"!!}</h1>
+                {{-- PUSANTE ANNULLA ULTIMA REVISIONE --}}
                 @if($announcement)
                 <div class="col-12">
                     <form action="{{route('revisor.getback', ['announcement'=>$announcement])}}" method="POST">
@@ -13,9 +14,12 @@
                     </form>
                 </div>
                 @endif
+                {{-- FINE PUSANTE ANNULLA ULTIMA REVISIONE --}}
             </div>
         </div>
     </div>
+
+    {{-- Annunci da revisionare --}}
     @if ($announcement_to_check)
         <section id="prodetails" class="section-p1">
             <div class="single">
@@ -26,7 +30,25 @@
                         @foreach($announcement_to_check->images as $image)
                         <div class="carousel-item @if($loop->first)active @endif">
                             <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="...">
+                            
+                            {{-- aggiunta ora API--}}
+                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                            <p>Satira: <span class="{{$image->spoof}}"></span></p>
+                            <p>Medicina: <span class="{{$image->medical}}"></span></p>
+                            <p>Violenza: <span class="{{$image->violence}}"></span></p>
+                            <p>Non adatto: <span class="{{$image->racy}}"></span></p>
+                            {{-- fine aggiunta --}}
+
+
+                            @if ($image->labels)
+                            <p>TAGS:</p>
+                            @foreach ($image->labels as $label)
+                                <span style="cursor: default" class="btn btn-dark mb-2">{{ $label }}</span class="btn btn-dark mb-2">
+                            @endforeach
+                                
+                            @endif
                         </div>
+
                         @endforeach
                     </div>
                         @else
@@ -45,11 +67,11 @@
                      
                     @endif
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
@@ -71,12 +93,18 @@
                 <span>
                     {{$announcement_to_check->body}}
                 </span>
+
+
+
             </div>
         </div>
         </section>
         
        
            
+
+
+        {{-- PULSANTI ACCETTA E RIFIUTA --}}
         <div class="container">
             <div class="row">
                 <div class="col-6">
@@ -98,6 +126,7 @@
                 </div>
             </div>
         </div>
+        {{-- fine PULSANTI ACCETTA E RIFIUTA --}}
         
         
     @endif
