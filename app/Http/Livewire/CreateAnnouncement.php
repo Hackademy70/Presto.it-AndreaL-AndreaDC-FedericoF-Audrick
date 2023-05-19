@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\File\File;
 
 
 
@@ -79,8 +81,12 @@ class CreateAnnouncement extends Component
         $this->announcement->save();
         if(count($this->images)){
             foreach ($this->images as $image){
-                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+                // $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName , 'public')]);
+                dispatch(new ResizeImage($newImage->path, 200, 200));
             }
+            File::deleteDirectory(storage_patch('/app/livewire-tmp'));
         }
         session()->flash('message', 'articolo inserito con sucesso, sara publico dopo la revisione');
         $this->cleanForm();

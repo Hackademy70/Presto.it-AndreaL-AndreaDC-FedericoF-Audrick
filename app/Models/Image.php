@@ -14,4 +14,5 @@ class Image extends Model
     public function announcement(){
         return $this->belongsTo(Announcement::class);
     }
+    
 }
