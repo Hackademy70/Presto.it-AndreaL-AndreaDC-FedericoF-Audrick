@@ -5,8 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Category;
 
-use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\File\File;
 
@@ -75,19 +76,18 @@ class CreateAnnouncement extends Component
     public function store(){
         
         $this->validate();
+
         $category=Category::find($this->category_id);
         $this->announcement = $category->announcements()->create($this->validate());
         $this->announcement->user()->associate(Auth::user()->id);
         $this->announcement->save();
         if(count($this->images)){
             foreach ($this->images as $image){
-                // $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
-                $newFileName = "announcements/{$this->announcement->id}";
-                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName , 'public')]);
-                dispatch(new ResizeImage($newImage->path, 200, 200));
+                $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
             }
-            File::deleteDirectory(storage_patch('/app/livewire-tmp'));
         }
+
+
         session()->flash('message', 'articolo inserito con sucesso, sara publico dopo la revisione');
         $this->cleanForm();
     }

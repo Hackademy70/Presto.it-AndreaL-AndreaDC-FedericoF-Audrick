@@ -1,11 +1,11 @@
-<div class=" col-12 col-lg-3 col-md-6 col-sm-12 ">
+<div class=" col-lg-2 col-md-4 col-sm-12 ">
     <div class="pro">
         <img src="{{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->
-        images()->first()->path) : 'https//picsum.photos/200'}}" class="card-img-top p-3 rounded" alt="img non trovata">
+        images()->first()->path) : 'https//picsum.photos/200'}}" alt="img non trovata">
         <div class="des">
             <span>{{ $announcement->created_at->format('d/m/y') }}</span>
             <h5>{{ $announcement->title }}</h5>
-            <a href="#">{{ $announcement->category->name }}</a>
+            {{-- <a href="#">{{ $announcement->category->name }}</a> --}}
             <div class="star">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
