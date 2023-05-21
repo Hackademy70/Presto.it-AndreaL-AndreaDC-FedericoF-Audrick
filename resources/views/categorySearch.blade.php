@@ -3,7 +3,7 @@
 
    
     {{-- sezione card ricerca per categoria--}}
-   <div class="container" style="height: 85vh">
+   <div class="container" style="min-height: 85vh">
     <div class="row">
         <div class="col-12">
           <div class="section-header text-center my-5">

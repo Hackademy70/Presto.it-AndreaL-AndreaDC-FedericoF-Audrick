@@ -79,9 +79,9 @@ button.normal {
 } 
 .single{
     width: 60vw;
+    
     display: flex ;
     
-    margin-top : 20px 
 }
 
 
@@ -91,27 +91,40 @@ button.normal {
     justify-content: center;
 }
  #prodetails .single-pro-image {
-    width: 100% ; 
-    
+    width: 70% ; 
+    /* height: 20%; */
     margin-right: 50px ;
 } 
 
+.carousel-item{
+    height:100%;
+}
+
 .small-img-group{
     display : flex ; 
-    justify-content: space-between ;
+    
    
 }
 
 .bigimg{
-    padding: 10px;
+    padding: 20px;
     border: 1px solid black;
 }
 
 
 .small-img-col{
+    
     flex-basis : 24% ; 
     cursor : pointer ;
     margin-top: 5px;
+    height: 125px;
+   
+}
+
+.small-img-col:nth-child(1),
+.small-img-col:nth-child(2),
+.small-img-col:nth-child(3){
+    margin-right: 1%;
 }
 
 #prodetails .single-pro-details {

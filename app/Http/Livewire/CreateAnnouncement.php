@@ -11,6 +11,7 @@ use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\HttpFoundation\File\File;
 
 
 
