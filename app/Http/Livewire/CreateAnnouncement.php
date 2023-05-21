@@ -6,6 +6,7 @@ use Livewire\Component;
 use App\Models\Category;
 
 use App\Jobs\RemoveFaces;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
@@ -69,9 +70,7 @@ class CreateAnnouncement extends Component
 
     
 
-    public function updated($propertyName){
-        $this->validateOnly($propertyName);
-    }
+
 
     public function store(){
         
@@ -83,22 +82,30 @@ class CreateAnnouncement extends Component
         $this->announcement->save();
         if(count($this->images)){
             foreach ($this->images as $image){
-                $newImage = $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
+                // $newImage = $this->announcement->images()->create(['path'=>$image->store('images', 'public')]);
                 
-                // $newFileName = "announcement/{$this->announcement->id}";
-                // $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
-                dispatch(new RemoveFaces($newImage->id));
-
-                // riga per verifica google vision
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
-                dispatch(new GoogleVisionLabelImage($newImage->id));
+                $newFileName = "announcement/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName, 'public')]);
+                RemoveFaces::withChain([
+                    new ResizeImage($newImage->path, 400, 300),
+    
+                    // riga per verifica google vision
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id),
+                ])->dispatch($newImage->id);
             }
-
+            // File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
 
         session()->flash('message', 'articolo inserito con sucesso, sara publico dopo la revisione');
         $this->cleanForm();
+    }
+
+
+
+    public function updated($propertyName){
+        $this->validateOnly($propertyName);
     }
 
    
