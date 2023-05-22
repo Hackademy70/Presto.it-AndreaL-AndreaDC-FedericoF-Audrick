@@ -50,9 +50,9 @@
                             @endif
                                      </div>
 
-                                
-                            </div>  --}}
-                      {{--  @else
+                                {{-- @endforeach --}}
+                            </div>
+                        @else
                             
                                 <div class="carousel-item active">
                                     <img src="https://th.bing.com/th/id/OIP.fPQn_oXIzbxBecSX5Z_gDQHaHa?pid=ImgDet&rs=1"
@@ -83,8 +83,8 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                </div> --}}
-                <div class="single-pro-image" >
+                </div> 
+                <div class="single-pro-image">
 
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -126,19 +126,7 @@
                                      alt="...">
                             </div>
                         @endforeach
-                        {{-- <div class="small-img-col">
-                            <img src="img/products/f1.jpg" width="100%" class="small-img" alt>
-                            
-                             </div>
-                            <div class="small-img-col">
-                            <img src="img/products/f2.jpg" width="100%" class="small-img" alt>
-                            </div>
-                            <div class="small-img-col">
-                            <img src="img/products/f3.jpg" width="100%" class="small-img" alt>
-                            </div>
-                            <div class="small-img-col">
-                            <img src="img/products/f4.jpg" width="100%" class="small-img" alt>
-                            </div> --}}
+                      
 
                     </div>
                 </div>
