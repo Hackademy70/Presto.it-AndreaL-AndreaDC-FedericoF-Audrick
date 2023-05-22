@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.3",
-        "flag-icon-css": "^4.1.7"
+        "flag-icon-css": "^4.1.7",
+        "install": "^0.13.0"
     }
 }
