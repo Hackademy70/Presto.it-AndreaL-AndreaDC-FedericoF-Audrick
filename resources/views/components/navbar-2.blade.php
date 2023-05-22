@@ -8,7 +8,7 @@
     </ul>
 </div> --}}
 
-<nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top @if (Route::currentRouteName() == 'login' || Route::currentRouteName() == 'register' || Route::currentRouteName() == 'announcement.create' || Route::currentRouteName() == 'revisor.index')d-none @endif>
+<nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top @if (Route::currentRouteName() == 'login' || Route::currentRouteName() == 'register' || Route::currentRouteName() == 'announcement.create' || Route::currentRouteName() == 'revisor.index')d-none @endif">
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler container" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -20,18 +20,25 @@
             <div class="navbar-nav">
                
 
-                @foreach ($categories as $category)
-                    <li>
-                        
-                        <a class="nav-link" href="{{ route('category.search', compact('category')) }}">{!! Str::upper($category->name) !!}</a>
-                    </li>
-                @endforeach
-                {{-- <a class="nav-link active" aria-current="page" href="#about">io</a>
-                <a class="nav-link" href="#skills">competenze</a>
-                <a class="nav-link" href="#experience">esperienze</a>
-                <a class="nav-link" href="#education">educazione</a>
-                <a class="nav-link" href="#portfolio">portfolio</a>
-                <a class="nav-link" href="#recommendations">ricommandazioni</a> --}}
+                @if (App::isLocale('it'))
+                    @foreach ($categories as $category)
+                        <li>
+                            <a class="nav-link" href="{{ route('category.search', compact('category')) }}">{!! Str::upper($category->name) !!}</a>
+                        </li>
+                    @endforeach
+                @elseif (App::isLocale('es'))
+                    @foreach ($categories as $category)
+                        <li>
+                            <a class="nav-link" href="{{ route('category.search', compact('category')) }}">{!! Str::upper($category->es) !!}</a>
+                        </li>
+                    @endforeach
+                @elseif (App::isLocale('en'))
+                    @foreach ($categories as $category)
+                        <li>
+                            <a class="nav-link" href="{{ route('category.search', compact('category')) }}">{!! Str::upper($category->en) !!}</a>
+                        </li>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>
