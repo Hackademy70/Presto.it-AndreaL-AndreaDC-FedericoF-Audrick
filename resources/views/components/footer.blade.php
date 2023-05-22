@@ -45,6 +45,6 @@
     </div>
 
     <div class="copyright">
-        <p>© 2021, Tech2 etc - HTML CSS Ecommerce Template</p>
+        <p>© 2023, Team Jedi - E-commerce Presto.it</p>
     </div>
 </footer>

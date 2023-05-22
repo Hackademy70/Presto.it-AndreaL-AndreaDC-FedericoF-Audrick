@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->string('en');
-            $table->string('es');
+            $table->string('en')->nullable();
+            $table->string('es')->nullable();
         });
     }
 

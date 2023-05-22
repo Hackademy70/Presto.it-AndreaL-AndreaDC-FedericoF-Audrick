@@ -4,15 +4,12 @@
     <div>
         <ul id="navbar">
             <li>
-                {{-- orm di ricerca --}}
+                {{-- form di ricerca --}}
                 <form class="d-flex @if (Route::currentRouteName() == 'login' || Route::currentRouteName() == 'register' || Route::currentRouteName() == 'announcement.create' || Route::currentRouteName() == 'revisor.index')d-none @endif" action="{{ route('search.announcements') }}" method="GET">
-                    <input name="searched" class="inputx form-control me-2" type="search" placeholder="Search"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input name="searched" class="inputx form-control me-2" type="search" placeholder="{{__('ui.buttonSearch')}}">
+                    <button class="btn btn-outline-success" type="submit">{{__('ui.buttonSearch')}}</button>
                 </form>
             </li>
-
-
             {{-- selezionare la lingua --}}
             <div class="select-menu">
                 <div class="select-btn" id="select-btn">
@@ -51,13 +48,13 @@
             @guest
                 <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
                 <!-- <li><a href="shop.html">articoli</a></li>            -->
-                <li><a class="text-white" href="{{ route('chisiamo') }}">Chi siamo</a></li>
+                <li><a class="text-white" href="{{ route('chisiamo') }}">{{__('ui.navbarAboutUs')}}</a></li>
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'register') d-none @endif"
-                        href="{{ route('register') }}">registrati</a></li>
+                        href="{{ route('register') }}">{{__('ui.navbarRegister')}}</a></li>
                 <!-- <li id ="lg-bag"><a href="cart.html"><i class="far fa-shopping-cart"></i></a></li>-->
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 <li><a class="btn btn-outline-light @if (Route::currentRouteName() == 'login') d-none @endif"
-                        href="{{ route('login') }}">login</a></li>
+                        href="{{ route('login') }}">{{__('ui.navbarLogin')}}</a></li>
                         <div class="selectmenu">
                             <div class="selectbtn" id="selectbtn">
                                 <a href="#">
@@ -93,9 +90,9 @@
                 {{-- logica user3 --}}
                 @if (Auth::user()->is_revisor)
                     <li>
-                        <a class="btn btn-outline-light" href="{{ route('revisor.index') }}">zona revisore
+                        <a class="btn btn-outline-light" href="{{ route('revisor.index') }}">{{__('ui.navbarRevisor')}}
                             <span>{{ App\Models\Announcement::toBeRevisionedCount() }}</span>
-                            <span class="visually-hidden">messagi non letti</span>
+                            <span class="visually-hidden">{{__('ui.navbarRevisorInfo')}}</span>
                         </a>
                     </li>
                 @endif

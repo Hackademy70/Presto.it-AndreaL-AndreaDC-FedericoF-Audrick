@@ -29,7 +29,7 @@
                             <div class="carousel-inner">
                                 @foreach ($announcement_to_check->images as $image)
                                     <div class="carousel-item @if ($loop->first) active @endif">
-                                        <img src="{{ Storage::url($image->path) }}" class="img-fluid p-3 rounded"
+                                        <img src="{{ $image->getUrl(400, 300) }}" class="img-fluid p-3 rounded"
                                             alt="...">
                             
                             {{-- aggiunta ora API--}}
