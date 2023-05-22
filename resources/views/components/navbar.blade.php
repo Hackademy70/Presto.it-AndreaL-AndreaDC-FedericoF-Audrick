@@ -106,7 +106,7 @@
                 {{-- fine rotta chiedi di lavorare con noi(revisore) --}}
 
                 {{-- <li><a class=" btn btn-outline-light" href="#">i miei annunci</a></li> --}}
-                <li><a class=" btn btn-outline-light" href="{{ route('announcement.create') }}">{{__('ui.navbarCreate')}}crea annunci</a></li>
+                <li><a class=" btn btn-outline-light" href="{{ route('announcement.create') }}">{{__('ui.navbarCreate')}}</a></li>
                 <li class="nav-link">{{ Auth::user()->name }}</li>
 
                 <li class="nav-item dropdown">

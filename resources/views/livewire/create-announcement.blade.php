@@ -60,16 +60,25 @@
                 <div class="mb-3">
                     <label for="category">{{__('ui.createCategory')}}</label>
                     <select wire:model="category_id" class="form-control">
+                        {{-- Dropdown Categories - Start --}}
+                        @if (App::isLocale('it'))
                         @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">{!! Str::ucFirst($category->name) !!}</option>
                         @endforeach
+                        @elseif (App::isLocale('es'))
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{!! Str::ucFirst($category->es) !!}</option>
+                        @endforeach
+                        @elseif (App::isLocale('en'))
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{!! Str::ucFirst($category->en) !!}</option>
+                        @endforeach
+                        @endif
+                        {{-- Dropdown Categories - End --}}
                     </select>
-
                 </div>
                 <button class="btn btn-dark container" type="submit">{{__('ui.createSend')}}</button>
             </form>
-
         </div>
-
     </div>
 </div>

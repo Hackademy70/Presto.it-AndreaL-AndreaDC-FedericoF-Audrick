@@ -1,50 +1,54 @@
 <?php
 return [
-    'allAnnouncements' => 'aqui estan todos',
-    'listaAnnunci' => 'lista de los annuncios',
-    'landimageTitle' => "¡Es hora de liberar tu armario!",
-    'buttonShowMore' => "Ver más",
+    'allAnnouncements' => 'Aquí están todos los anuncios',
+    'listaAnnunci' => 'Lista de anuncios',
+    // land image
+    'landimageTitle' => '¡Es hora de liberar tu armario!',
+    'buttonShowMore' => 'Mostrar más',
     // navbar
-    'buttonSearch' => "Buscar",
-    'navbarAboutUs' => "Acerca de nosotros",
-    'navbarLogin' => "Iniciar sesión",
-    'navbarRegister' => "Registrarse",
-    'navbarRevisor' => "Revisor",
-    'navbarRevisorInfo' => "Unread Messages",
+    'buttonSearch' => 'Buscar',
+    'navbarAboutUs' => 'Quiénes somos',
+    'navbarLogin' => 'Iniciar sesión',
+    'navbarRegister' => 'Registrarse',
+    'navbarRevisor' => 'Revisor',
+    'navbarRevisorInfo' => 'Mensajes no leídos',
+    'navbarWorkWithUs' => 'Trabaja con nosotros',
+    'navbarCreate' => 'Crear anuncio',
+    'navbarLogout' => 'Cerrar sesión',
     // login page
     'loginTitle' => 'Ingresa tus datos para iniciar sesión',
-    'loginSecure' => "No compartiremos tus datos con nadie.",
+    'loginSecure' => 'No compartiremos tus datos con nadie.',
     'loginEmailLabel' => 'Correo electrónico',
     'loginPassLabel' => 'Contraseña',
     'loginButton' => 'Iniciar sesión',
     // register page
     'registerTitle' => 'Ingresa tus datos para registrarte',
     'registerNameLabel' => 'Nombre de usuario',
-    'registerNamePlaceholder' => 'Giacomo1990',
+    'registerNamePlaceholder' => 'JuanPerez1990',
     'registerEmailLabel' => 'Correo electrónico',
-    'registerEmailPlaceholder' => 'ejemplo@test.com',
-    'registerSecure' => "No compartiremos tus datos con nadie.",
+    'registerEmailPlaceholder' => 'ejemplo@ejemplo.com',
+    'registerSecure' => 'No compartiremos tus datos con nadie.',
     'registerPassLabel' => 'Contraseña',
     'registerPassPlaceholder' => 'Contraseña1?',
     'registerPassInfo' => 'La contraseña debe cumplir con los siguientes requisitos:',
-    'registerFirstInfo' => 'Al menos 8 caracteres',
-    'registerSecondInfo' => 'Al menos 1 carácter especial de los siguientes',
+    'registerFirstInfo' => 'Mínimo 8 caracteres',
+    'registerSecondInfo' => 'Al menos 1 caracter especial de los siguientes',
     'registerThirdInfo' => 'Al menos 1 número',
     'registerPassConfLabel' => 'Confirmar contraseña',
     'registerButton' => 'Registrarse',
-    // Announcement Search Page -> announcement.index
-    'searchTitle' => 'Se encontraron los siguientes anuncios:',
-    'searchNotFound' => 'No hay anuncios que coincidan con los criterios de búsqueda.',
-    // Create Article Page
+    // Página de búsqueda de anuncios -> announcement.index
+    'searchTitle' => 'Los anuncios encontrados son los siguientes:',
+    'searchNotFound' => 'No se encontraron anuncios que coincidan con los criterios de búsqueda.',
+    // Página de creación de artículo
     'createTitleLabel' => 'Título del artículo',
-    'createImageLabel' => 'Carga hasta un máximo de 5 imágenes.',
+    'createImageLabel' => 'Sube hasta un máximo de 5 imágenes.',
     'createUndo' => 'Deshacer',
     'createDescription' => 'Descripción',
     'createPrice' => 'Precio',
     'createCategory' => 'Categoría',
     'createSend' => 'Crear',
     'createTitle' => '¡Crea tu anuncio personalizado!',
-    // Category Search Page
-    'categorySearchTitle' => 'Todos los artículos en la categoría:',
+    // Página de búsqueda por categoría
+    'categorySearchTitle' => 'Todos los artículos de la categoría:',
 ];
 ?>
