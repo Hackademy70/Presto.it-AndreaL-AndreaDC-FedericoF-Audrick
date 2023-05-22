@@ -23,7 +23,7 @@
     @if ($announcement_to_check)
         <section id="prodetails" class="section-p1" >
             <div class="row mx-5">
-                {{-- <div class="single-pro-image">
+                <div class="single-pro-image">
                     <div id="carouselExampleIndicators" class="carousel slide bigimg active" data-bs-ride="carousel">
                         @if ($announcement_to_check->images)
                             <div class="carousel-inner">
@@ -33,15 +33,15 @@
                                             alt="...">
                             
                             {{-- aggiunta ora API--}}
-                            {{-- <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
                             <p>Satira: <span class="{{$image->spoof}}"></span></p>
                             <p>Medicina: <span class="{{$image->medical}}"></span></p>
                             <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                            <p>Non adatto: <span class="{{$image->racy}}"></span></p> --}}
+                            <p>Non adatto: <span class="{{$image->racy}}"></span></p>
                             {{-- fine aggiunta --}}
 
 
-                            {{-- @if ($image->labels)
+                            @if ($image->labels)
                             <p>TAGS:</p>
                             @foreach ($image->labels as $label)
                                 <span style="cursor: default" class="btn btn-dark mb-2">{{ $label }}</span class="btn btn-dark mb-2">
@@ -50,7 +50,7 @@
                             @endif
                                      </div>
 
-                                {{-- @endforeach --}}
+                                @endforeach
                             </div>
                         @else
                             
