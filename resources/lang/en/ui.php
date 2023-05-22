@@ -37,6 +37,14 @@ return [
     'searchNotFound' => 'No announcements match the search criteria.',
     // Create Article Page
     'createTitleLabel' => 'Article Title',
-    'createImageLabel' => 'Upload up to a maximum of 5 images.'
+    'createImageLabel' => 'Upload up to a maximum of 5 images.',
+    'createUndo' => 'Undo',
+    'createDescription' => 'Description',
+    'createPrice' => 'Price',
+    'createCategory' => 'Category',
+    'createSend' => 'Create',
+    'createTitle' => 'Create your custom announcement!',
+    // Category Search Page
+    'categorySearchTitle' => 'All items in the category:',
 ];
 ?>

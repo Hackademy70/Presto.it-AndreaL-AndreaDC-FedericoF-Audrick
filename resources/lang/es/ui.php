@@ -37,6 +37,14 @@ return [
     'searchNotFound' => 'No hay anuncios que coincidan con los criterios de búsqueda.',
     // Create Article Page
     'createTitleLabel' => 'Título del artículo',
-    'createImageLabel' => 'Carga hasta un máximo de 5 imágenes.'
+    'createImageLabel' => 'Carga hasta un máximo de 5 imágenes.',
+    'createUndo' => 'Deshacer',
+    'createDescription' => 'Descripción',
+    'createPrice' => 'Precio',
+    'createCategory' => 'Categoría',
+    'createSend' => 'Crear',
+    'createTitle' => '¡Crea tu anuncio personalizado!',
+    // Category Search Page
+    'categorySearchTitle' => 'Todos los artículos en la categoría:',
 ];
 ?>
