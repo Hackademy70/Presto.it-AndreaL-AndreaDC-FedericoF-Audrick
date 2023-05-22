@@ -59,7 +59,7 @@
         </div>
     </section> --}}
     <section id="prodetails" class="section-p1">
-        <div class="single">
+        {{-- <div class="single"> --}}
 
             <div class="single-pro-image">
 
@@ -79,7 +79,7 @@
                             <div class="carousel-item @if ($loop->first) active @endif">
 
                                 <img src="{{ Storage::url($image->path) }}" class="bigimg d-block" width="100%"
-                                    height="400px" alt="...">
+                                    alt="...">
                             </div>
                         @endforeach
 
@@ -138,7 +138,7 @@
                 </span>
             </div>
         </div>
-        </div>
+        {{-- </div> --}}
     </section>
 
     <script>

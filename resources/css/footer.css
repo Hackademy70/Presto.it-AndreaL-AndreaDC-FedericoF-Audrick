@@ -9,7 +9,7 @@ footer {
     margin-top: 30px;
 }
 
-footer .col {
+footer .coll {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

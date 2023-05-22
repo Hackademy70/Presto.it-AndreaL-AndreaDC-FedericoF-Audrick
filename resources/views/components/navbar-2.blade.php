@@ -8,7 +8,7 @@
     </ul>
 </div> --}}
 
-<nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav id="myNavbar" class="navbar navbar-expand-lg navbar-dark sticky-top @if (Route::currentRouteName() == 'login' || Route::currentRouteName() == 'register' || Route::currentRouteName() == 'announcement.create' || Route::currentRouteName() == 'revisor.index')d-none @endif>
     <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler container" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"

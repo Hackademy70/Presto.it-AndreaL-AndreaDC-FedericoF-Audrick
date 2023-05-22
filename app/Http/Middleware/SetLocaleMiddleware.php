@@ -14,10 +14,24 @@ class SetLocaleMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next)
+
+
+
+    // public function handle(Request $request, Closure $next)
+    // {
+    //     $localeLanguage = session('locale', 'it');
+    //     App::setLocale($localeLanguage);
+    //     return $next($request);
+    // }
+
+    public function handle($request, Closure $next)
     {
-        $localeLanguage = session('locale', 'it');
-        App::setLocale($localeLanguage);
+        if (Session()->has('applocale') AND array_key_exists(Session()->get('applocale'), config('languages'))) {
+            App::setLocale(Session()->get('applocale'));
+        }
+        else { // This is optional as Laravel will automatically set the fallback language if there is none specified
+            App::setLocale(config('app.fallback_locale'));
+        }
         return $next($request);
     }
 }

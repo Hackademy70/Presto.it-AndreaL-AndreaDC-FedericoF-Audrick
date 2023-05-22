@@ -5,33 +5,42 @@
         <ul id="navbar">
             <li>
                 {{-- orm di ricerca --}}
-                <form class="d-flex" action="{{ route('search.announcements') }}" method="GET">
+                <form class="d-flex @if (Route::currentRouteName() == 'login' || Route::currentRouteName() == 'register' || Route::currentRouteName() == 'announcement.create' || Route::currentRouteName() == 'revisor.index')d-none @endif" action="{{ route('search.announcements') }}" method="GET">
                     <input name="searched" class="inputx form-control me-2" type="search" placeholder="Search"
                         aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </li>
 
-        
 
+            {{-- selezionare la lingua --}}
             <div class="select-menu">
                 <div class="select-btn" id="select-btn">
-                   
-                    <i class="icon-arrow fa-solid fa-language"></i>
+                    <a href="#">
+                        <span
+                            class="icon-arrow flag-icon flag-icon-{{ Config::get('languages')[App::getLocale()]['flag-icon'] }}"></span>
+                    </a>
+                    {{-- <i class="icon-arrow fa-solid fa-language"></i> --}}
                 </div>
                 <ul class="list">
-                    <li class="option" style="--i:1;">
-                        <x-_locale class="" lang="it" />
-                        
-                    </li>
-                    <li class="option" style="--i:2;">
-                        <x-_locale class="" lang="es" />
-                        
-                    </li>
-                    <li class="option" style="--i:3;">
-                        <x-_locale class="" lang="en" />
-                        
-                    </li>
+                    @php
+                        $i = 1; 
+                    @endphp
+
+                    @foreach (Config::get('languages') as $lang => $language)
+                        <li class="option" style="--i:{{ $i }}">
+                            {{-- <x-_locale class="" lang="it" /> --}}
+
+                            @if ($lang != App::getLocale())
+                                <a class=" dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
+                                        class=" flag-icon flag-icon-{{ $language['flag-icon'] }}"></span></a>
+                            @endif
+                        </li>
+
+                        @php
+                            $i++; // Incrémentez la variable $i à chaque itération
+                        @endphp
+                    @endforeach
                 </ul>
             </div>
 
@@ -51,25 +60,33 @@
                         href="{{ route('login') }}">login</a></li>
                         <div class="selectmenu">
                             <div class="selectbtn" id="selectbtn">
-                               
-                                <i class="iconarrow fa-solid fa-language"></i>
+                                <a href="#">
+                                    <span
+                                        class="iconarrow flag-icon flag-icon-{{ Config::get('languages')[App::getLocale()]['flag-icon'] }}"></span>
+                                </a>
+                                {{-- <i class="icon-arrow fa-solid fa-language"></i> --}}
                             </div>
                             <ul class="lista">
-                                <li class="optione" style="--i:1;">
-                                    <x-_locale class="" lang="it" />
-                                    
-                                </li>
-                                <li class="optione" style="--i:2;">
-                                    <x-_locale class="" lang="es" />
-                                    
-                                </li>
-                                <li class="optione" style="--i:3;">
-                                    <x-_locale class="" lang="en" />
-                                    
-                                </li>
+                                @php
+                                    $i = 1; // Initialisez la variable $i à 1 avant la boucle foreach
+                                @endphp
+            
+                                @foreach (Config::get('languages') as $lang => $language)
+                                    <li class="optione" style="--i:{{ $i }}">
+                                        {{-- <x-_locale class="" lang="it" /> --}}
+            
+                                        @if ($lang != App::getLocale())
+                                            <a class=" dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
+                                                    class=" flag-icon flag-icon-{{ $language['flag-icon'] }}"></span></a>
+                                        @endif
+                                    </li>
+            
+                                    @php
+                                        $i++; // Incrémentez la variable $i à chaque itération
+                                    @endphp
+                                @endforeach
                             </ul>
                         </div>
-                        
             @else
                 <li><a class="text-white" href="{{ route('home') }}">Home</a></li>
 
@@ -117,22 +134,31 @@
                 </li>
                 <div class="selectmenu">
                     <div class="selectbtn" id="selectbtn">
-                       
-                        <i class="iconarrow fa-solid fa-language"></i>
+                        <a href="#">
+                            <span
+                                class="iconarrow flag-icon flag-icon-{{ Config::get('languages')[App::getLocale()]['flag-icon'] }}"></span>
+                        </a>
+                        {{-- <i class="icon-arrow fa-solid fa-language"></i> --}}
                     </div>
                     <ul class="lista">
-                        <li class="optione" style="--i:1;">
-                            <x-_locale class="" lang="it" />
-                            
-                        </li>
-                        <li class="optione" style="--i:2;">
-                            <x-_locale class="" lang="es" />
-                            
-                        </li>
-                        <li class="optione" style="--i:3;">
-                            <x-_locale class="" lang="en" />
-                            
-                        </li>
+                        @php
+                            $i = 1; // Initialisez la variable $i à 1 avant la boucle foreach
+                        @endphp
+    
+                        @foreach (Config::get('languages') as $lang => $language)
+                            <li class="optione" style="--i:{{ $i }}">
+                                {{-- <x-_locale class="" lang="it" /> --}}
+    
+                                @if ($lang != App::getLocale())
+                                    <a class=" dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
+                                            class=" flag-icon flag-icon-{{ $language['flag-icon'] }}"></span></a>
+                                @endif
+                            </li>
+    
+                            @php
+                                $i++; // Incrémentez la variable $i à chaque itération
+                            @endphp
+                        @endforeach
                     </ul>
                 </div>
             @endguest
@@ -152,7 +178,7 @@
     const bar = document.getElementById('bar');
     const nav = document.getElementById('navbar');
     const close = document.getElementById('close');
-   
+
     if (bar) {
         bar.addEventListener('click', () => {
             nav.classList.add('active');
@@ -169,8 +195,8 @@
     const text = document.getElementById("text");
     const option = document.getElementsByClassName("option");
     const icon = document.getElementsByClassName("icon");
-    
-    
+
+
 
     selectBtn.addEventListener('click', function() {
         selectBtn.classList.toggle('active');
@@ -180,18 +206,21 @@
 
     for (options of option) {
         options.onclick = function() {
-            
+
             selectBtn.innerHTML = this.innerHTML;
             selectBtn.classList.remove('active');
         }
     }
 
+
+    //logica per lingue versione mobile
+
     const selectBtn2 = document.getElementById("selectbtn");
-   
+
     const optione = document.getElementsByClassName("optione");
     // const icon = document.getElementsByClassName("icon");
-    
-    
+
+
 
     selectBtn2.addEventListener('click', function() {
         selectBtn2.classList.toggle('active');
@@ -201,7 +230,7 @@
 
     for (options of optione) {
         options.onclick = function() {
-            
+
             selectBtn.innerHTML = this.innerHTML;
             selectBtn.classList.remove('active');
         }

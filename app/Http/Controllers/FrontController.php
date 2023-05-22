@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Announcement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class FrontController extends Controller
 {
@@ -40,8 +43,16 @@ class FrontController extends Controller
 
 
   //rotta set language
-  public function setLanguage($lang){
-    session()->put('locale', $lang);
-    return redirect()->back();
-  }
+  // public function setLanguage($lang){
+  //   session()->put('locale', $lang);
+  //   return redirect()->back();
+  // }
+
+  public function switchLang($lang)
+    {
+        if (array_key_exists($lang, Config::get('languages'))) {
+            Session::put('applocale', $lang);
+        }
+        return Redirect::back();
+    }
 }

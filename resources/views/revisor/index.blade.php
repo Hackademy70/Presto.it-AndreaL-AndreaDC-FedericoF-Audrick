@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div class="container">
+    <div class="container" >
         <div class="row">
             <div class="col-12">
                 <h1>{!!$announcement_to_check ? "ecco annuncio da revisionare" : "non ci sono annunci"!!}</h1>
@@ -21,8 +21,8 @@
 
     {{-- Annunci da revisionare --}}
     @if ($announcement_to_check)
-        <section id="prodetails" class="section-p1">
-            <div class="single">
+        <section id="prodetails" class="section-p1" >
+            <div class="row mx-5">
                 {{-- <div class="single-pro-image">
                     <div id="carouselExampleIndicators" class="carousel slide bigimg active" data-bs-ride="carousel">
                         @if ($announcement_to_check->images)
@@ -33,26 +33,26 @@
                                             alt="...">
                             
                             {{-- aggiunta ora API--}}
-                            <p>Adulti: <span class="{{$image->adult}}"></span></p>
+                            {{-- <p>Adulti: <span class="{{$image->adult}}"></span></p>
                             <p>Satira: <span class="{{$image->spoof}}"></span></p>
                             <p>Medicina: <span class="{{$image->medical}}"></span></p>
                             <p>Violenza: <span class="{{$image->violence}}"></span></p>
-                            <p>Non adatto: <span class="{{$image->racy}}"></span></p>
+                            <p>Non adatto: <span class="{{$image->racy}}"></span></p> --}}
                             {{-- fine aggiunta --}}
 
 
-                            @if ($image->labels)
+                            {{-- @if ($image->labels)
                             <p>TAGS:</p>
                             @foreach ($image->labels as $label)
                                 <span style="cursor: default" class="btn btn-dark mb-2">{{ $label }}</span class="btn btn-dark mb-2">
                             @endforeach
                                 
                             @endif
-                                    </div>
+                                     </div>
 
-                                @endforeach
-                            </div>
-                        @else
+                                
+                            </div>  --}}
+                      {{--  @else
                             
                                 <div class="carousel-item active">
                                     <img src="https://th.bing.com/th/id/OIP.fPQn_oXIzbxBecSX5Z_gDQHaHa?pid=ImgDet&rs=1"
@@ -84,7 +84,7 @@
                         </button>
                     </div>
                 </div> --}}
-                <div class="single-pro-image">
+                <div class="single-pro-image" >
 
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -102,7 +102,7 @@
                                 <div class="carousel-item @if ($loop->first) active @endif">
 
                                     <img src="{{ Storage::url($image->path) }}" class="bigimg d-block" width="100%"
-                                        height="400px" alt="...">
+                                         alt="...">
                                 </div>
                             @endforeach
 
@@ -121,9 +121,9 @@
 
                     <div class="small-img-group">
                         @foreach ($announcement_to_check->images as $image)
-                            <div class="small-img-col">
+                            <div class="card small-img-col">
                                 <img src="{{ Storage::url($image->path) }}" class="small-img" width="100%"
-                                    height="100%" alt="...">
+                                     alt="...">
                             </div>
                         @endforeach
                         {{-- <div class="small-img-col">
@@ -142,7 +142,7 @@
 
                     </div>
                 </div>
-                <div class="single-pro-details">
+                <div class="single-pro-details mx-7 col">
                     <h6>{{ $announcement_to_check->category->name }}</h6>
                     <h4>{{ $announcement_to_check->title }}</h4>
                     <h2>{{ $announcement_to_check->price }}</h2>
@@ -161,7 +161,7 @@
                     </span>
                 </div>
             </div>
-            </div>
+            
         </section>
         
        
@@ -193,7 +193,9 @@
             </div>
         </div>
         {{-- fine PULSANTI ACCETTA E RIFIUTA --}}
-        
-        
+    @else    
+        <div class="contain" style="min-height:50vh">
+
+        </div>
     @endif
 </x-layout>

@@ -37,3 +37,6 @@
 
 /* language */
 @import '/resources/css/_locale.css';
+
+/* loader*/
+@import '/resources/css/loader.css';

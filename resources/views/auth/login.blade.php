@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container" style="min-height:60vh">
+    <div class="container" style="min-height:50vh">
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-lg-4 my-5 ">
                 <h1 class="text-center"> login!</h1>

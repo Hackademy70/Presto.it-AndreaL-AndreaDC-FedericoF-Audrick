@@ -72,4 +72,5 @@ Route::controller(RevisorController::class)->group( function() {
 
 
 //LINGUE ROTTA PROVA
-Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
+// Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setLocale');
+Route::get('lingua/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\FrontController@switchLang']);
