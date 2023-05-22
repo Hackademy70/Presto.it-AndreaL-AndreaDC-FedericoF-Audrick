@@ -1,14 +1,11 @@
 <x-layout>
-
-
-   
     {{-- sezione card ricerca per categoria--}}
    <div class="container" style="min-height: 85vh">
     <div class="row">
         <div class="col-12">
           <div class="section-header text-center my-5">
             <h1 class="display-4">
-                <span class="search-label">Ricerca per categoria:</span>
+                <span class="search-label">{{__('ui.categorySearchTitle')}}</span>
                 <span class="category-name">{{ $category->name }}</span>
             </h1>
             <div class="section-divider"></div>
@@ -38,5 +35,4 @@
         </div>
     </div>
 </div>
-
 </x-layout>

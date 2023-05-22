@@ -24,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Titre de l'email</title>
+    <title>Titolo della Mail</title>
     <style>
         /* Styles généraux */
         body {

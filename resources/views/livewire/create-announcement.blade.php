@@ -2,7 +2,7 @@
 
     <div class="row d-flex justify-content-center">
         <div class="col-12 col-lg-4">
-            <h1>Crea il tuo annuncio!</h1>
+            <h1>{{__('ui.createTitle')}}</h1>
             @if (session()->has('message'))
                 <span class="btn btn-success container">{{ session('message') }}</span>
             @endif
@@ -44,21 +44,21 @@
                     </div>
                 @endif
                 <div class="mb-3">
-                    <label for="body">descrizione</label>
+                    <label for="body">{{__('ui.createDescription')}}</label>
                     <textarea wire:model="body" type="text" class="form-control"></textarea>
                     @error('body')
                         <span class="error text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="price">prezzo</label>
+                    <label for="price">{{__('ui.createPrice')}}</label>
                     <input wire:model="price" type="number" class="form-control">
                     @error('price')
                         <span class="error text-danger">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="category">categorie</label>
+                    <label for="category">{{__('ui.createCategory')}}</label>
                     <select wire:model="category_id" class="form-control">
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -66,7 +66,7 @@
                     </select>
 
                 </div>
-                <button class="btn btn-dark container" type="submit">manda</button>
+                <button class="btn btn-dark container" type="submit">{{__('ui.createSend')}}</button>
             </form>
 
         </div>

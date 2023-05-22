@@ -102,11 +102,11 @@
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 {{-- fineIcona chiusura navbar MOBILE --}}
                 {{-- rotta chiedi di lavorare con noi(revisore) --}}
-                <li><a class=" btn btn-outline-light" href="{{ route('become.revisor') }}">Lavora con noi</a></li>
+                <li><a class=" btn btn-outline-light" href="{{ route('become.revisor') }}">{{__('ui.navbarWorkWithUs')}}</a></li>
                 {{-- fine rotta chiedi di lavorare con noi(revisore) --}}
 
                 {{-- <li><a class=" btn btn-outline-light" href="#">i miei annunci</a></li> --}}
-                <li><a class=" btn btn-outline-light" href="{{ route('announcement.create') }}">crea annunci</a></li>
+                <li><a class=" btn btn-outline-light" href="{{ route('announcement.create') }}">{{__('ui.navbarCreate')}}crea annunci</a></li>
                 <li class="nav-link">{{ Auth::user()->name }}</li>
 
                 <li class="nav-item dropdown">
@@ -123,7 +123,7 @@
                         </form>
                         <li class="nav-item"><a class="btn btn-outline-dark" href="/logout"
                                 onclick="event.preventDefault();
-           getElementById('form-logout').submit()">logout</a>
+           getElementById('form-logout').submit()">{{__('ui.navbarLogout')}}</a>
                         </li>
                         {{-- <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="#">Something else here</a></li> --}}

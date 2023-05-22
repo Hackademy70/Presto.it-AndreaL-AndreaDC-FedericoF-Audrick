@@ -12,6 +12,9 @@ return[
     'navbarRegister'=>"Registrati",
     'navbarRevisor'=>"Revisore",
     'navbarRevisorInfo'=>"Messaggi non letti",
+    'navbarWorkWithUs'=>'Lavora con noi',
+    'navbarCreate'=>'Crea annuncio',
+    'navbarLogout'=>'Logout',
     //login page
     'loginTitle'=>'Inserisci i tuoi dati per accedere',
     'loginSecure'=>'Non condivideremo i tuoi dati con nessuno.',
@@ -38,6 +41,14 @@ return[
     'searchNotFound'=>'Nessun annuncio corrisponde ai criteri di ricerca.',
     // pagina creazione articolo
     'createTitleLabel'=>'Titolo dell\'articolo',
-    'createImageLabel'=>'Inserisci fino a un massimo di 5 immagini.'
+    'createImageLabel'=>'Inserisci fino a un massimo di 5 immagini.',
+    'createUndo'=>'Cancella',
+    'createDescription'=>'Descrizione',
+    'createPrice'=>'Prezzo',
+    'createCategory'=>'Categoria',
+    'createSend'=>'Crea',
+    'createTitle'=>'Crea il tuo annuncio personalizzato!',
+    // pagina ricerca per categoria
+    'categorySearchTitle'=>'Tutti gli articoli della categoria:',
 ];
 ?>

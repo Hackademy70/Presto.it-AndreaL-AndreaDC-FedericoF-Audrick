@@ -134,7 +134,8 @@
                     <h6>{{ $announcement_to_check->category->name }}</h6>
                     <h4>{{ $announcement_to_check->title }}</h4>
                     <h2>{{ $announcement_to_check->price }}</h2>
-                    <select>
+                    {{-- NON FUNZIONANTE --}}
+                    {{-- <select>
                         <option>Select Size</option>
                         <option>XL</option>
                         <option>XXL</option>
@@ -143,7 +144,8 @@
                     </select>
                     <input type="number" value="1">
                     <button class="normal">Add To Cart</button>
-                    <h4>Product Details</h4>
+                    <h4>Product Details</h4> --}}
+                    {{-- NON FUNZIONANTE --}}
                     <span>
                         {{ $announcement_to_check->body }}
                     </span>
