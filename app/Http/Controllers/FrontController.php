@@ -42,11 +42,6 @@ class FrontController extends Controller
 
 
 
-  //rotta set language
-  // public function setLanguage($lang){
-  //   session()->put('locale', $lang);
-  //   return redirect()->back();
-  // }
 
   public function switchLang($lang)
     {
