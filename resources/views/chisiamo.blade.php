@@ -1,5 +1,4 @@
 <x-layout>
-
     <div class="xbody">
         <section class="team">
             <div class="x-container">
@@ -8,12 +7,4 @@
             </div>
         </section>
     </div>
-
-
-    <script>
-        
-        
-       
-    </script>
-
 </x-layout>

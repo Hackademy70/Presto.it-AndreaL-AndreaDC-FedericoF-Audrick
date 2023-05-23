@@ -4,6 +4,14 @@ sistemare drop down categorie
 fare uscire errori form
 
 
+# pagine e componenti tradotti
+- announcement.index -> OK
+- loader -> OK
+- landimage -> OK
+- login -> OK
+- register -> OK
+
+
 
 
 ## NON CANCELLARE

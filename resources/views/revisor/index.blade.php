@@ -71,12 +71,12 @@
                         <div class="carousel-inner">
                             @foreach ($announcement_to_check->images as $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">
-
+    
                                     <img src="{{ Storage::url($image->path) }}" class="bigimg d-block" width="100%"
                                        height=""  alt="...">
                                 </div>
                             @endforeach
-
+    
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                             data-bs-slide="prev">
@@ -89,7 +89,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-
+    
                     <div class="small-img-group">
                         @php
                         $i = 0; 
@@ -106,10 +106,10 @@
                             @endphp
                         @endforeach
                       
-
+    
                     </div>
                 </div>
-                <div class="single-pro-details mx-7 col">
+                <div class="single-pro-details mx-7 col-12 col-md col-sm-12">
                     <h6>{{ $announcement_to_check->category->name }}</h6>
                     <h4>{{ $announcement_to_check->title }}</h4>
                     <h2>{{ $announcement_to_check->price }}</h2>

@@ -4,10 +4,10 @@
         <div class="col-md-6">
           <div class="card">
             <div class="card-header">
-              <h2 class="card-title">È arrivato il momento di<br> liberare l'armadio!</h2>
+              <h2 class="card-title">{{__('ui.landimageTitle')}}</h2>
             </div>
             <div class="card-footer">
-              <button class="btn btn-primary">Scopri di più</button>
+              <button class="btn btn-primary">{{__('ui.buttonShowMore')}}</button>
             </div>
           </div>
         </div>
