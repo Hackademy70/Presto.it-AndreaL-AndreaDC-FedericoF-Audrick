@@ -58,10 +58,10 @@
         </div>
         </div>
     </section> --}}
-    <section id="prodetails" class="section-p1">
+    {{-- <section id="prodetails" class="section-p1">
         {{-- <div class="single"> --}}
 
-            <div class="single-pro-image">
+            {{-- <div class="single-pro-image">
 
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -102,7 +102,7 @@
                             <img src="{{ Storage::url($image->path) }}" class="small-img" width="100%" height="100%"
                                 alt="...">
                         </div>
-                    @endforeach
+                    @endforeach --}}
                     {{-- <div class="small-img-col">
                       <img src="img/products/f1.jpg" width="100%" class="small-img" alt>
                       
@@ -117,7 +117,7 @@
                       <img src="img/products/f4.jpg" width="100%" class="small-img" alt>
                       </div> --}}
 
-                </div>
+                {{-- </div>
             </div>
             <div class="single-pro-details">
                 <h6>{{ $announcement->category->name }}</h6>
@@ -139,6 +139,80 @@
             </div>
         </div>
         {{-- </div> --}}
+    {{-- </section> --}} 
+
+
+
+    <section id="prodetails" class="section-p1 py-5 d-flex justify-content-center">
+        
+       
+        <div class="row mx-5 border col-8 ">
+            
+            <div class="col-12 single-pro-image col-sm-12">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    
+                    <div class="carousel-inner">
+                        @foreach ($announcement->images as $image)
+                            <div class="carousel-item @if ($loop->first) active @endif">
+
+                                <img src="{{ Storage::url($image->path) }}" class="bigimg d-block" width="100%"
+                                   height="450px"  alt="...">
+                            </div>
+                        @endforeach
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div class="small-img-group">
+                    @php
+                    $i = 0; 
+                    @endphp
+                    @foreach ($announcement->images as $image)
+                        
+                        <div class="card small-img-col">
+                            <img src="{{ Storage::url($image->path) }}" class="small-img" width="100%"
+                            height="125px"     alt="..." data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$i}}"
+                            class="active" aria-current="true" aria-label="Slide {{$i+1}}">
+                        </div>
+                        @php
+                        $i++; 
+                        @endphp
+                    @endforeach
+                  
+
+                </div>
+            </div>
+            <div class="single-pro-details col-12 col-md col-sm-12">
+                <h6>{{ $announcement->category->name }}</h6>
+                <h4>{{ $announcement->title }}</h4>
+                <h2>{{ $announcement->price }}</h2>
+                <select>
+                    <option>Select Size</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                    <option>Small</option>
+                    <option>Large</option>
+                </select>
+                <input type="number" value="1">
+                <button class="normal btn ">Add To Cart</button>
+                <h4>Product Details</h4>
+                <span>
+                    {{ $announcement->body }}
+                </span>
+            </div>
+        </div>
+
     </section>
 
     <script>

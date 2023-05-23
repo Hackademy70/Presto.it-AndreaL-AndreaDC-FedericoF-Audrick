@@ -31,10 +31,10 @@
                         <li class="option" style="--i:{{ $i }}">
                             {{-- <x-_locale class="" lang="it" /> --}}
 
-                            @if ($lang != App::getLocale())
+                            {{-- @if ($lang != App::getLocale()) --}}
                                 <a class=" dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
                                         class=" flag-icon flag-icon-{{ $language['flag-icon'] }}"></span></a>
-                            @endif
+                            {{-- @endif --}}
                         </li>
 
                         @php
@@ -75,10 +75,10 @@
                                     <li class="optione" style="--i:{{ $i }}">
                                         {{-- <x-_locale class="" lang="it" /> --}}
             
-                                        @if ($lang != App::getLocale())
+                                        
                                             <a class=" dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
                                                     class=" flag-icon flag-icon-{{ $language['flag-icon'] }}"></span></a>
-                                        @endif
+                                       
                                     </li>
             
                                     @php
@@ -149,10 +149,10 @@
                             <li class="optione" style="--i:{{ $i }}">
                                 {{-- <x-_locale class="" lang="it" /> --}}
     
-                                @if ($lang != App::getLocale())
+                               
                                     <a class=" dropdown-item" href="{{ route('lang.switch', $lang) }}"><span
                                             class=" flag-icon flag-icon-{{ $language['flag-icon'] }}"></span></a>
-                                @endif
+                               
                             </li>
     
                             @php
