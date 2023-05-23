@@ -31,8 +31,10 @@
             <div class="col-12 col-lg-6 col-md-6 col-sm-12 py-5 border">
                 <div class="  d-flex justify-content-center">
                     <div class="col-6">
-                        <img src="{{ Storage::url($image->path) }}" class="" width="60%" height="200px" hei
-                            alt="...">
+                        {{-- <img src="{{ Storage::url($image->path) }}" class="" width="60%" height="200px" hei
+                            alt="..."> --}}
+                            <img src="{{ $image->getUrl(400, 300) }}" class="img-fluid p-3 rounded"
+                                            alt="...">
                     </div>
                     <div class="col-6">
                         <ul>
