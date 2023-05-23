@@ -57,6 +57,25 @@
                 </div>
             </div>
         @endforeach
+
+        <div class="single-pro-details mx-5 mt-5 col-12 col-md col-sm-12">
+            <h6>{{ $announcement_to_check->category->name }}</h6>
+            <h4>{{ $announcement_to_check->title }}</h4>
+            <h2>{{ $announcement_to_check->price }}</h2>
+            {{-- <select>
+                <option>Select Size</option>
+                <option>XL</option>
+                <option>XXL</option>
+                <option>Small</option>
+                <option>Large</option>
+            </select> --}}
+            {{-- <input type="number" value="1">
+            <button class="normal btn ">Add To Cart</button>
+            <h4>Product Details</h4> --}}
+            <span>
+                {{ $announcement_to_check->body }}
+            </span>
+        </div>
         </div>
        
      @endif
@@ -142,14 +161,15 @@
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         
                         <div class="carousel-inner">
-                            @foreach ($announcement_to_check->images as $image)
+                            {{-- @foreach ($announcement_to_check->images as $image)
                                 <div class="carousel-item @if ($loop->first) active @endif">
     
                                     <img src="{{ Storage::url($image->path) }}" class="bigimg d-block" width="100%"
                                        height="450px"  alt="...">
                                 </div>
-                            @endforeach
+                            @endforeach --}}
     
+                            
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                             data-bs-slide="prev">
@@ -163,42 +183,8 @@
                         </button>
                     </div>
     
-                    <div class="small-img-group">
-                        @php
-                        $i = 0; 
-                        @endphp
-                        @foreach ($announcement_to_check->images as $image)
-                            
-                            <div class="card small-img-col">
-                                <img src="{{ Storage::url($image->path) }}" class="small-img" width="100%"
-                                height="125px"     alt="..." data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$i}}"
-                                class="active" aria-current="true" aria-label="Slide {{$i+1}}">
-                            </div>
-                            @php
-                            $i++; 
-                            @endphp
-                        @endforeach
-                      
-    
-                    </div>
-                </div>
-                <div class="single-pro-details mx-7 col-12 col-md col-sm-12">
-                    <h6>{{ $announcement_to_check->category->name }}</h6>
-                    <h4>{{ $announcement_to_check->title }}</h4>
-                    <h2>{{ $announcement_to_check->price }}</h2>
-                    <select>
-                        <option>Select Size</option>
-                        <option>XL</option>
-                        <option>XXL</option>
-                        <option>Small</option>
-                        <option>Large</option>
-                    </select>
-                    <input type="number" value="1">
-                    <button class="normal btn ">Add To Cart</button>
-                    <h4>Product Details</h4>
-                    <span>
-                        {{ $announcement_to_check->body }}
-                    </span>
+
+
                 </div>
             </div>
     

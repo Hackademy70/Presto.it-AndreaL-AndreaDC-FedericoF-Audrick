@@ -1,5 +1,5 @@
 <section id="header">
-    <a href="{{ route('home') }}"><img src="{{ Storage::url('images/logo.png') }}" class="logo" alt="logo"></a>
+    <a href="{{ route('home') }}"><img src="https://cdn.discordapp.com/attachments/1076537937229008936/1110471127484076032/logo.png" class="logo" alt="logo"></a>
 
     <div>
         <ul id="navbar">
