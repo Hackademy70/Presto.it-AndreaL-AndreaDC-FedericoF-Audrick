@@ -101,8 +101,9 @@
                 {{-- Icona chiusura navbar MOBILE --}}
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 {{-- fineIcona chiusura navbar MOBILE --}}
+                
                 {{-- rotta chiedi di lavorare con noi(revisore) --}}
-                <li><a class=" btn btn-outline-light @if ( Route::currentRouteName() == 'revisor.index'|| Route::currentRouteName()=='home'|| Route::currentRouteName()=='announcement.create')d-none @endif" href="{{ route('become.revisor') }}">{{__('ui.navbarWorkWithUs')}}</a></li>
+                <li><a class=" btn btn-outline-light" href="{{ route('become.revisor') }}">{{__('ui.navbarWorkWithUs')}}</a></li>
                 {{-- fine rotta chiedi di lavorare con noi(revisore) --}}
 
                 {{-- <li><a class=" btn btn-outline-light" href="#">i miei annunci</a></li> --}}
@@ -159,6 +160,7 @@
                     </ul>
                 </div>
             @endguest
+            
 
         </ul>
     </div>
