@@ -102,7 +102,7 @@
                 <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
                 {{-- fineIcona chiusura navbar MOBILE --}}
                 {{-- rotta chiedi di lavorare con noi(revisore) --}}
-                <li><a class=" btn btn-outline-light" href="{{ route('become.revisor') }}">{{__('ui.navbarWorkWithUs')}}</a></li>
+                <li><a class=" btn btn-outline-light @if ( Route::currentRouteName() == 'revisor.index'|| Route::currentRouteName()=='home'|| Route::currentRouteName()=='announcement.create')d-none @endif" href="{{ route('become.revisor') }}">{{__('ui.navbarWorkWithUs')}}</a></li>
                 {{-- fine rotta chiedi di lavorare con noi(revisore) --}}
 
                 {{-- <li><a class=" btn btn-outline-light" href="#">i miei annunci</a></li> --}}
@@ -139,7 +139,7 @@
                     </div>
                     <ul class="lista">
                         @php
-                            $i = 1; // Initialisez la variable $i à 1 avant la boucle foreach
+                            $i = 1; 
                         @endphp
     
                         @foreach (Config::get('languages') as $lang => $language)
